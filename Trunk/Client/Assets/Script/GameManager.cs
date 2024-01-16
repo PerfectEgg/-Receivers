@@ -34,5 +34,6 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         user.MoveUpdate();
+        user.SpriteSet();
     }
 }

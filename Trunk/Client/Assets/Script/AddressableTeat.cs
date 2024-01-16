@@ -1,30 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class AddressableTeat : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    public Dictionary<string, Sprite> sprites;
 
     public bool isLoaded = false;
 
-    public void Init(SpriteRenderer sr)
+    public void Init(Dictionary<string, Sprite> lsprites)
     {
-        spriteRenderer = sr;
+        sprites = lsprites;
     }
 
     public void Load(string address)
     {
-        Addressables.LoadAssetAsync<Sprite>(address).Completed +=
-            (AsyncOperationHandle<Sprite> obj) =>
+        Addressables.LoadAssetAsync<Sprite[]>(address).Completed +=
+            (AsyncOperationHandle<Sprite[]> obj) =>
             {
                 switch (obj.Status)
                 {
                     case AsyncOperationStatus.Succeeded:
                         {
-                            spriteRenderer.sprite = obj.Result;
+                            for (int i = 0; i < obj.Result.Length; i++)
+                            {
+                                sprites.Add(obj.Result[i].name, obj.Result[i]);
+                            }
                         }
                         break;
                     case AsyncOperationStatus.Failed:
@@ -40,14 +44,14 @@ public class AddressableTeat : MonoBehaviour
 
     public void Release()
     {
-        Addressables.Release(spriteRenderer);
+        Addressables.Release(sprites);
     }
 
     public Sprite GetSprite()
     {
-        if (spriteRenderer == null)
+        if (sprites == null)
             return null;
 
-        return spriteRenderer.sprite;
+        return sprites.First().Value;
     }
 }

@@ -6,17 +6,31 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    enum CharacterType : short
+    public enum CharacterType : short
     {
         None = 0,
         User = 1,
         Monster = 2,
         Max,
     }
+
+    public enum State : short
+    {
+        None = 0,
+        Idle = 1,
+        Run = 2,
+        Dead = 3,
+        Max,
+    }
+
     private GameObject character;
     private AddressableTeat AT;
     protected SpriteRenderer spriteRenderer;
+    private Dictionary<string, Sprite> sprites;
+    private int spriteNum = 0;
+
     private CharacterType characterType;
+    private State state;
 
     public Transform Transform;
 
@@ -53,12 +67,38 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void SpriteSet()
+    {
+        string key = StateKey(state);
+
+        if (key == "error")
+            return;
+
+        ++spriteNum;
+
+        key += " " + spriteNum;
+
+        Sprite value = null;
+        if(sprites.TryGetValue(key, out value) == false)
+        {
+            key = key[..^1];
+            key += 0;
+            spriteNum = 0;
+            sprites.TryGetValue(key, out value);
+        }
+
+
+        spriteRenderer.sprite = value;
+    }
+
     public void Init(short type, GameObject gameObject, float speed)
     {
         GameObject ATObject = new GameObject("AT");
         AT = ATObject.AddComponent<AddressableTeat>();
 
         characterType = (CharacterType)type;
+        state = State.Idle;
+
         character = gameObject;
         spriteRenderer = character.AddComponent<SpriteRenderer>();
         character.SetActive(true);
@@ -67,7 +107,9 @@ public class Character : MonoBehaviour
 
         this.speed = speed;
 
-        AT.Init(spriteRenderer);
+        sprites = new Dictionary<string, Sprite>();
+
+        AT.Init(sprites);
 
         string loadAddressName = null;
 
@@ -82,11 +124,37 @@ public class Character : MonoBehaviour
         }
 
         AT.Load(loadAddressName);
+
+        string key = StateKey(state);
+
+        if (key == "error")
+            return;
+
+        key += " " + spriteNum;
+
+        Sprite value = null;
+        sprites.TryGetValue(key, out value);
+
+        spriteRenderer.sprite = value;
     }
 
     public IEnumerator SetRenderer()
     {
         while (AT.isLoaded == false)
             yield return null;
+    }
+    public string StateKey(State state)
+    {
+        switch(state)
+        {
+            case State.Idle:
+                return "Stand";
+            case State.Run:
+                return "Run";
+            case State.Dead:
+                return "Dead";
+        }
+
+        return "error";
     }
 }
