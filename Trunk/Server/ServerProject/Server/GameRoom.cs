@@ -8,8 +8,8 @@ namespace Server
 {
     class GameRoom
     {
-        List<ClientSession> _session = new List<ClientSession>();
-        object _lock = new object();
+        private List<ClientSession> _session = new List<ClientSession>();
+        private object _lock = new object();
 
         public void Broadcast(ClientSession session, string chat)
         {

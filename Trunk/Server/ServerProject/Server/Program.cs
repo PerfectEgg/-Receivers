@@ -11,7 +11,7 @@ using ServerCore;
 
 namespace Server
 {
-    public class Program
+    class Program
     {
         static Listener _listener = new Listener();
         public static GameRoom Room = new GameRoom();

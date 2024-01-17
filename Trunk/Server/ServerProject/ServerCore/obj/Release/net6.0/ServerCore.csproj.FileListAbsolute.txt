@@ -1,0 +1,12 @@
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\bin\Release\net6.0\ServerCore.deps.json
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\bin\Release\net6.0\ServerCore.dll
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\bin\Release\net6.0\ServerCore.pdb
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.csproj.AssemblyReference.cache
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.AssemblyInfoInputs.cache
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.AssemblyInfo.cs
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.csproj.CoreCompileInputs.cache
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.dll
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\refint\ServerCore.dll
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ServerCore.pdb
+C:\Receivers\Trunk\Server\ServerProject\ServerCore\obj\Release\net6.0\ref\ServerCore.dll

@@ -29,10 +29,10 @@ namespace ServerCore
 
         void RegisterConnect(SocketAsyncEventArgs args)
         {
-            Socket socket = args.UserToken as Socket;
+            Socket socket = args.UserToken as Socket; 
             if (socket == null)
                 return;
-
+             
             bool pending = socket.ConnectAsync(args);
             if (pending = false)
                 OnConnectCompleted(null, args);

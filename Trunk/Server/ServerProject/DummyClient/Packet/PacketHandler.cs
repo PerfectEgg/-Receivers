@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 internal class PacketHandler
 {
-
     public static void S_ChatHandler(PacketSession session, IPacket packet)
     {
         S_Chat chatPacket = packet as S_Chat;

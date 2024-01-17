@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DummyClient
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -34,7 +34,6 @@ namespace DummyClient
                 }
                 catch (Exception e)
                 {
-
                     Console.WriteLine(e.ToString());
                 }
 
