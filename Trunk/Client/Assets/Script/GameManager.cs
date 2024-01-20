@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
         objectManager.Init(50);
 
         user.Init(1, objectManager.GetObject(), 3.0f);
-        user.SetRenderer();
     }
 
     private void Update()
@@ -33,7 +32,9 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (user.AnimatorSet() == false)
+            return;
+
         user.MoveUpdate();
-        user.SpriteSet();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using UnityEngine;
@@ -24,10 +25,10 @@ public class Character : MonoBehaviour
     }
 
     private GameObject character;
-    private AddressableTeat AT;
+    private AddressableTest AT;
     protected SpriteRenderer spriteRenderer;
     private Dictionary<string, Sprite> sprites;
-    private int spriteNum = 0;
+    private Animator animator;
 
     private CharacterType characterType;
     private State state;
@@ -40,66 +41,74 @@ public class Character : MonoBehaviour
     ~Character()
     {
         AT.Release();
-
     }
 
     public void MoveUpdate()
     {
+        // 죽었다면 움직임 불가.
+        if (state == State.Dead)
+            return;
+
+        state = State.Idle;
+
+        // 움직였다면 이동.
+        // 좌우라면 해당 위치에 맞게 flipX조정.
+        // 움직였다면 상태 변경.
+
         // 오른쪽
-        if(Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             Transform.Translate(Vector2.right * speed * Time.deltaTime);
+            spriteRenderer.flipX = false;
+            Move();
         }
         // 왼쪽
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Transform.Translate(Vector2.left * speed * Time.deltaTime);
+            spriteRenderer.flipX = true;
+            Move();
         }
         // 위
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Transform.Translate(Vector2.up * speed * Time.deltaTime);
+            Move();
         }
         // 아래
         if (Input.GetKey(KeyCode.DownArrow))
         {
             Transform.Translate(Vector2.down * speed * Time.deltaTime);
+            Move();
         }
+
+        if (state == State.Idle)
+            animator.SetBool("isMove", false);
     }
 
-    public void SpriteSet()
+    public bool AnimatorSet()
     {
-        string key = StateKey(state);
-
-        if (key == "error")
-            return;
-
-        ++spriteNum;
-
-        key += " " + spriteNum;
-
-        Sprite value = null;
-        if(sprites.TryGetValue(key, out value) == false)
+        if (animator.runtimeAnimatorController == null)
         {
-            key = key[..^1];
-            key += 0;
-            spriteNum = 0;
-            sprites.TryGetValue(key, out value);
+            if (AT.loadCount > 0)
+                return false;
+
+            animator.runtimeAnimatorController = AT.animator;
         }
 
-
-        spriteRenderer.sprite = value;
+        return true;
     }
 
     public void Init(short type, GameObject gameObject, float speed)
     {
         GameObject ATObject = new GameObject("AT");
-        AT = ATObject.AddComponent<AddressableTeat>();
+        AT = ATObject.AddComponent<AddressableTest>();
 
         characterType = (CharacterType)type;
         state = State.Idle;
 
         character = gameObject;
+        animator = character.AddComponent<Animator>();
         spriteRenderer = character.AddComponent<SpriteRenderer>();
         character.SetActive(true);
         character.transform.position = Vector3.zero;
@@ -109,40 +118,25 @@ public class Character : MonoBehaviour
 
         sprites = new Dictionary<string, Sprite>();
 
-        AT.Init(sprites);
+        AT.Init(sprites, animator.runtimeAnimatorController);
 
         string loadAddressName = null;
+        string animatorName = null;
 
         switch(characterType)
         {
             case CharacterType.User:
                 loadAddressName = "tempUser";
+                animatorName = "playerAnimatorController";
                 break;
             case CharacterType.Monster:
                 loadAddressName = "tempMonster";
                 break;
         }
 
-        AT.Load(loadAddressName);
-
-        string key = StateKey(state);
-
-        if (key == "error")
-            return;
-
-        key += " " + spriteNum;
-
-        Sprite value = null;
-        sprites.TryGetValue(key, out value);
-
-        spriteRenderer.sprite = value;
+        AT.Load(loadAddressName, animatorName);
     }
 
-    public IEnumerator SetRenderer()
-    {
-        while (AT.isLoaded == false)
-            yield return null;
-    }
     public string StateKey(State state)
     {
         switch(state)
@@ -156,5 +150,11 @@ public class Character : MonoBehaviour
         }
 
         return "error";
+    }
+
+    private void Move()
+    {
+        state = State.Run;
+        animator.SetBool("isMove", true);
     }
 }
