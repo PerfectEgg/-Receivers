@@ -58,28 +58,22 @@ public class Character : MonoBehaviour
         // 오른쪽
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Transform.Translate(Vector2.right * speed * Time.deltaTime);
-            spriteRenderer.flipX = false;
-            Move();
+            Move(Vector2.right, 0);
         }
         // 왼쪽
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Transform.Translate(Vector2.left * speed * Time.deltaTime);
-            spriteRenderer.flipX = true;
-            Move();
+            Move(Vector2.left, 1);
         }
         // 위
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            Transform.Translate(Vector2.up * speed * Time.deltaTime);
-            Move();
+            Move(Vector2.up);
         }
         // 아래
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Transform.Translate(Vector2.down * speed * Time.deltaTime);
-            Move();
+            Move(Vector2.down);
         }
 
         if (state == State.Idle)
@@ -152,8 +146,35 @@ public class Character : MonoBehaviour
         return "error";
     }
 
-    private void Move()
+    private bool IsCollision(Vector2 nextPos)
     {
+        return Physics2D.OverlapBox(nextPos, new Vector2(1, 1), 0.0f) == null ? false : true;
+    }
+
+    private Vector2 ToVector2(Vector3 Pos)
+    {
+        return new Vector2(Pos.x, Pos.y);
+    }
+
+    // flipX == 0 오른쪽을 본다 == 1 왼쪽을 본다 그 외엔 신경쓰지 않는다.
+    private void Move(Vector2 destination, short flipX = 3)
+    {
+        Vector2 nextPos = ToVector2(Transform.position) + (destination * speed * Time.deltaTime);
+        if (IsCollision(nextPos) == false)
+        {
+            Transform.Translate(destination * speed * Time.deltaTime);
+            
+            switch(flipX)
+            {
+                case 0:
+                    spriteRenderer.flipX = false;
+                    break;
+                case 1: 
+                    spriteRenderer.flipX = true;
+                    break;
+            }
+        }
+
         state = State.Run;
         animator.SetBool("isMove", true);
     }

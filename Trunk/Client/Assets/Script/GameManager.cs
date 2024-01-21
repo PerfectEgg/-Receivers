@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
         objectManager.Init(50);
 
         user.Init(1, objectManager.GetObject(), 3.0f);
+
+        Camera.main.GetComponent<CameraMove>().SetPlayerTransfrom(user.Transform);
     }
 
     private void Update()
