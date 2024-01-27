@@ -1,3 +1,9 @@
+﻿################################################################################
+# 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
+################################################################################
+
+/Trunk/Server/ServerProject/ServerProject.sln
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudio
 
