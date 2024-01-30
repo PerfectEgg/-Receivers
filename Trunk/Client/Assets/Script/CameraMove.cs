@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -39,7 +37,7 @@ public class CameraMove : MonoBehaviour
 
     public void SetPlayerTransfrom(Transform transform)
     {
-        if(this.playerTransform == null)
+        if (this.playerTransform == null)
             this.playerTransform = transform;
     }
 

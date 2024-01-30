@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,8 +20,8 @@ public class ObjectManager : MonoBehaviour
     }
 
     public GameObject GetObject()
-    { 
-        if(Objects.Count > 0)
+    {
+        if (Objects.Count > 0)
         {
             GameObject gameObject = Objects.Dequeue();
             return gameObject;

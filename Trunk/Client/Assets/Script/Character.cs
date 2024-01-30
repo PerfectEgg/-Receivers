@@ -1,8 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Runtime.Serialization;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -117,7 +113,7 @@ public class Character : MonoBehaviour
         string loadAddressName = null;
         string animatorName = null;
 
-        switch(characterType)
+        switch (characterType)
         {
             case CharacterType.User:
                 loadAddressName = "tempUser";
@@ -133,7 +129,7 @@ public class Character : MonoBehaviour
 
     public string StateKey(State state)
     {
-        switch(state)
+        switch (state)
         {
             case State.Idle:
                 return "Stand";
@@ -163,13 +159,13 @@ public class Character : MonoBehaviour
         if (IsCollision(nextPos) == false)
         {
             Transform.Translate(destination * speed * Time.deltaTime);
-            
-            switch(flipX)
+
+            switch (flipX)
             {
                 case 0:
                     spriteRenderer.flipX = false;
                     break;
-                case 1: 
+                case 1:
                     spriteRenderer.flipX = true;
                     break;
             }
