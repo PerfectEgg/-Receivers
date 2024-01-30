@@ -20,6 +20,8 @@ namespace Assets.Script.WindowEditor
             tileMapExporter.Show();
         }
 
+        GameObject prefab;
+
         string saveAddress = Application.dataPath + "\\Data\\MapData\\";
         string saveDataAddress = Application.dataPath + "\\Resources\\Prefab\\MapPrefab";
         string saveFormat = "json";
@@ -49,15 +51,18 @@ namespace Assets.Script.WindowEditor
                     continue;
                 string saveName = fileName.Substring(0, fileName.LastIndexOf(".", fileName.Length - 1, fileName.Length));
 
-                Grid grid = Resources.Load<GameObject>("Prefab\\MapPrefab\\" + saveName).GetComponent<Grid>();
+                //Grid grid = Resources.Load<GameObject>("Prefab\\MapPrefab\\" + saveName).GetComponent<Grid>();
+                prefab = Resources.Load<GameObject>("Prefab\\MapPrefab\\" + saveName);
 
-                if (grid == null)
+                if (prefab == null)
                 {
                     EditorUtility.DisplayDialog("실패", "Grid 객체를 확인할 수 없습니다.", "확인");
                     return false;
                 }
 
-                Tilemap[] tiles = grid.GetComponentsInChildren<Tilemap>();
+                GameObject atc = Instantiate(prefab);
+
+                Tilemap[] tiles = atc.GetComponentsInChildren<Tilemap>();
                 Tilemap SaveTileMap = null;
                 foreach(Tilemap tile in tiles)
                 {
@@ -81,7 +86,7 @@ namespace Assets.Script.WindowEditor
 
                 // node
                 AStarPathfind.Node[,] nodes = new AStarPathfind.Node[SaveTileMap.cellBounds.size.x, SaveTileMap.cellBounds.size.y];
-
+                //
                 for (int i = 0; i < SaveTileMap.cellBounds.size.x; ++i)
                 {
                     for (int j = 0; j < SaveTileMap.cellBounds.size.y; ++j)
@@ -127,6 +132,9 @@ namespace Assets.Script.WindowEditor
                 }
 
                 Debug.Log("After GridName : " + fileName + " WallCount : " + c2);
+
+                DestroyImmediate(atc);
+                prefab = atc = null;
             }
 
             return true;
