@@ -16,7 +16,8 @@ internal class PacketHandler
         if (clientSession != null)
             return;
 
-        clientSession.Room.Broadcast(clientSession, chatPacket.chat);
+        GameRoom room = clientSession.Room;
+        room.Push(() => room.Broadcast(clientSession, chatPacket.chat));
     }
 
 }

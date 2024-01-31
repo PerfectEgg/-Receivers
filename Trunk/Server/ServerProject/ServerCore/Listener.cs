@@ -14,7 +14,7 @@ namespace ServerCore
         Socket _listenSocket;
         Func<Session> _sessionFactory;
 
-        public void init(IPEndPoint endPoint, Func<Session> sessionFactory)
+        public void init(IPEndPoint endPoint, Func<Session> sessionFactory, int register = 10, int backlog = 100)
         {
             // 문지기의 스마트폰을 생성하는 단계, 인자로는 네트워크 주소, 소켓 타입, 프로토콜 타입을 기입한다.
             _listenSocket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
@@ -24,11 +24,14 @@ namespace ServerCore
             _listenSocket.Bind(endPoint);
 
             // 영업 시작, 이때 인자의 정수는 최대 대기수이다.
-            _listenSocket.Listen(10);
+            _listenSocket.Listen(backlog);
 
-            SocketAsyncEventArgs args = new SocketAsyncEventArgs();
-            args.Completed += new EventHandler<SocketAsyncEventArgs>(OnAcceptCompleted);
-            RegisterAccept(args);
+            for (int i = 0; i < register; i++)
+            {
+                SocketAsyncEventArgs args = new SocketAsyncEventArgs();
+                args.Completed += new EventHandler<SocketAsyncEventArgs>(OnAcceptCompleted);
+                RegisterAccept(args);
+            }
         }
 
         void RegisterAccept(SocketAsyncEventArgs args)

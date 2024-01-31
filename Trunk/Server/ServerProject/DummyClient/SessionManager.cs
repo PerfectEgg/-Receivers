@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DummyClient
 {
-    internal class SessionManager
+    class SessionManager
     {
         static SessionManager _session = new SessionManager();
-        public static SessionManager Instance { get {  return _session; } }
+        public static SessionManager Instance { get { return _session; } }
 
         List<ServerSession> _sessions = new List<ServerSession>();
         object _lock = new object();
@@ -18,14 +18,22 @@ namespace DummyClient
         {
             lock (_lock) 
             {
-                foreach (ServerSession session in _sessions) 
+                try
                 {
-                    C_Chat chatPacket = new C_Chat();
-                    chatPacket.chat = $"Hello Server !";
-                    ArraySegment<byte> segment = chatPacket.Write();
+                    foreach (ServerSession session in _sessions)
+                    {
+                        C_Chat chatPacket = new C_Chat();
+                        chatPacket.chat = $"Hello Server !";
+                        ArraySegment<byte> segment = chatPacket.Write();
 
-                    session.Send(segment);
+                        session.Send(segment);
+                    }
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"{e.ToString()}");
+                }
+                
             }
         }
 

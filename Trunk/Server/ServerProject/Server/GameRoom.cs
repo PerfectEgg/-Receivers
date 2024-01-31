@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServerCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,25 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class GameRoom
+    class GameRoom : IJobQueue
     {
-        private List<ClientSession> _session = new List<ClientSession>();
-        private object _lock = new object();
+        List<ClientSession> _session = new List<ClientSession>();
+        JobQueue _jobQueue = new JobQueue();
+        List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>(); 
+
+        public void Push(Action job)
+        {
+            _jobQueue.Push(job);
+        }
+
+        public void Flush()
+        {
+            foreach (ClientSession s in _session)
+                s.Send(_pendingList);
+
+            Console.WriteLine($"Flushed {_pendingList.Count} items");
+            _pendingList.Clear();
+        }
 
         public void Broadcast(ClientSession session, string chat)
         {
@@ -18,28 +34,21 @@ namespace Server
             packet.chat = $"{chat} I m {packet.playerID}";
             ArraySegment<byte> segment = packet.Write();
 
-            lock (_lock) 
-            {
-                foreach (ClientSession s in _session)
-                    s.Send(segment);    
-            }
+            _pendingList.Add(segment);
+              
         }
 
         public void Enter(ClientSession session)
         {
-            lock (_lock) 
-            { 
-                _session.Add(session);
-                session.Room = this;
-            }
+            _session.Add(session);
+            session.Room = this;
         }
 
         public void Leave(ClientSession session)
         {
-            lock (_lock) 
-            {
-                _session.Remove(session);
-            }
+             _session.Remove(session);
         }
+
+        
     }
 }
