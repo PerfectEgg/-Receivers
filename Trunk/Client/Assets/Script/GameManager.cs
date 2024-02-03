@@ -1,13 +1,17 @@
-﻿using UnityEngine;
+﻿using Assets.Script.AStartPathfinder;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private ObjectManager objectManager;
+    private AStarPathfinderManager aStarPathfinderManager;
 
     Character user;
 
     private void Start()
     {
+        aStarPathfinderManager = new AStarPathfinderManager();
+
         GameObject gameObject = new GameObject("objectManager");
         objectManager = gameObject.AddComponent<ObjectManager>();
 

@@ -14,11 +14,20 @@ public class CameraMove : MonoBehaviour
     private float width;
     private float cameraMoveSpeed = 0.5f;
 
+    private bool isInTilemap = false;
+
     private void Start()
     {
         mainCamera = Camera.main;
 
-        Tilemap t = GameObject.Find("WallTilemap").GetComponent<Tilemap>();
+        var tile = GameObject.Find("WallTilemap");
+        if (tile is null)
+        {
+            return;
+        }
+
+        Tilemap t = tile.GetComponent<Tilemap>();
+
         var min = t.cellBounds.min;
         moveMin = new Vector2(min.x, min.y);
         var max = t.cellBounds.max;
@@ -28,6 +37,8 @@ public class CameraMove : MonoBehaviour
 
         height = mainCamera.orthographicSize;
         width = height * Screen.width / Screen.height;
+
+        isInTilemap = true;
     }
 
     void FixedUpdate()
@@ -43,6 +54,9 @@ public class CameraMove : MonoBehaviour
 
     private void LimitCameraArea()
     {
+        if (isInTilemap == false)
+            return;
+
         transform.position = Vector3.Lerp(transform.position,
             playerTransform.position, cameraMoveSpeed);
 

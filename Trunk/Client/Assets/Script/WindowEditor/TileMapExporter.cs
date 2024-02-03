@@ -22,8 +22,8 @@ namespace Assets.Script.WindowEditor
 
         GameObject prefab;
 
-        string saveAddress = Application.dataPath + "\\Data\\MapData\\";
-        string saveDataAddress = Application.dataPath + "\\Resources\\Prefab\\MapPrefab";
+        string saveAddress = Application.dataPath + "//Data//MapData//";
+        string saveDataAddress = Application.dataPath + "//Resources//Prefab//MapPrefab";
         string saveFormat = "json";
         private void OnGUI()
         {
@@ -52,7 +52,7 @@ namespace Assets.Script.WindowEditor
                 string saveName = fileName.Substring(0, fileName.LastIndexOf(".", fileName.Length - 1, fileName.Length));
 
                 //Grid grid = Resources.Load<GameObject>("Prefab\\MapPrefab\\" + saveName).GetComponent<Grid>();
-                prefab = Resources.Load<GameObject>("Prefab\\MapPrefab\\" + saveName);
+                prefab = Resources.Load<GameObject>("Prefab//MapPrefab//" + saveName);
 
                 if (prefab == null)
                 {
