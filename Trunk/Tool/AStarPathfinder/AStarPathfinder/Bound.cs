@@ -17,7 +17,19 @@ namespace AStarPathfind
         int SizeX;
         int SizeY;
 
+        public Bound() { }
+
         public Bound(int minX, int minY, int maxX, int maxY, int sizeX, int sizeY)
+        {
+            MinX = minX;
+            MinY = minY;
+            MaxX = maxX;
+            MaxY = maxY;
+            SizeX = sizeX;
+            SizeY = sizeY;
+        }
+
+        public void AllSet(int minX, int minY, int maxX, int maxY, int sizeX, int sizeY)
         {
             MinX = minX;
             MinY = minY;

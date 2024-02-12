@@ -53,9 +53,6 @@ namespace AStarPathfind
 
         public static void Load(string saveDataString, out Bound bound, out Node[,] nodes)
         {
-            bound = null;
-            nodes = null;
-
             JObject jRoot = JObject.Parse(saveDataString);
 
             JToken jBToken = jRoot["Bound"];
@@ -69,7 +66,6 @@ namespace AStarPathfind
             int SizeY = (int)jBToken["SizeY"];
 
             bound = new Bound(MinX, MinY, MaxX, MaxY, SizeX, SizeY);
-
             nodes = new Node[SizeX, SizeY];
 
             JToken jNToken = jRoot["Node"];

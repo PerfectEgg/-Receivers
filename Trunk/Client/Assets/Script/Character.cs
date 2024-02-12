@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public class Character : MonoBehaviour
         Idle = 1,
         Run = 2,
         Dead = 3,
+        Tracking = 4,
         Max,
     }
 
@@ -30,6 +32,8 @@ public class Character : MonoBehaviour
     private State state;
 
     public Transform Transform;
+
+    public Vector2Int Vector2IntPosition => new Vector2Int((int)transform.position.x, (int)transform.position.y);
 
     [SerializeField]
     private float speed;
@@ -89,7 +93,7 @@ public class Character : MonoBehaviour
         return true;
     }
 
-    public void Init(short type, GameObject gameObject, float speed)
+    public void Init(short type, GameObject gameObject, Character parent, float speed)
     {
         GameObject ATObject = new GameObject("AT");
         AT = ATObject.AddComponent<AddressableTest>();
@@ -98,6 +102,7 @@ public class Character : MonoBehaviour
         state = State.Idle;
 
         character = gameObject;
+        character.transform.parent = parent.transform;
         animator = character.AddComponent<Animator>();
         spriteRenderer = character.AddComponent<SpriteRenderer>();
         character.SetActive(true);

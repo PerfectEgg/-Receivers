@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.WSA;
 
 public class CameraMove : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class CameraMove : MonoBehaviour
     private void Start()
     {
         mainCamera = Camera.main;
+    }
 
+    public void SetTileData()
+    {
         var tile = GameObject.Find("WallTilemap");
         if (tile is null)
         {

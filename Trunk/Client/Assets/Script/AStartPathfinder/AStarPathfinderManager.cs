@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using Assets.Script.LazySingleton;
 using AStarPathfind;
+using UnityEngine;
 
 
 namespace Assets.Script.AStartPathfinder
@@ -51,6 +52,34 @@ namespace Assets.Script.AStartPathfinder
 
                 dicAStarts.Add(key, aStarPathfinder);
             } // end of foreach(var file in di.GetFiles())
+        }
+
+        public bool GetMapMinMaxPos(string key, out int minX, out int minY, out int maxX, out int maxY)
+        {
+            minX = 0;
+            minY = 0;
+            maxX = 0;
+            maxY = 0;
+
+            if (!dicAStarts.TryGetValue(key, out var map))
+                return false;
+
+            minX = map.bottomLeft.x;
+            minY = map.bottomLeft.y;
+            maxX = map.topRight.x;
+            maxY = map.topRight.y;
+
+            return true;
+        }
+
+        public bool Pathfind(string key, Vector2Int stratPos, Vector2Int endPos, ref List<Node> finalNodeList)
+        {
+            if (!dicAStarts.TryGetValue(key, out var map))
+                return false;
+
+            map.PathFinding(stratPos, endPos, ref finalNodeList);
+
+            return true;
         }
     }
 }
