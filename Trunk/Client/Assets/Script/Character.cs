@@ -1,7 +1,9 @@
+using Assets.Script.Manager;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 나중에 플레이어, 적 클래스 나누기.
 public class Character : MonoBehaviour
 {
     public enum CharacterType : short
@@ -19,14 +21,16 @@ public class Character : MonoBehaviour
         Run = 2,
         Dead = 3,
         Tracking = 4,
+        Spawn = 5,
         Max,
     }
 
     private GameObject character;
-    private AddressableTest AT;
     protected SpriteRenderer spriteRenderer;
     private Dictionary<string, Sprite> sprites;
     private Animator animator;
+
+    private Dictionary<State, Action> actionHandlers;
 
     private CharacterType characterType;
     private State state;
@@ -37,11 +41,6 @@ public class Character : MonoBehaviour
 
     [SerializeField]
     private float speed;
-
-    ~Character()
-    {
-        AT.Release();
-    }
 
     public void MoveUpdate()
     {
@@ -80,56 +79,56 @@ public class Character : MonoBehaviour
             animator.SetBool("isMove", false);
     }
 
-    public bool AnimatorSet()
-    {
-        if (animator.runtimeAnimatorController == null)
-        {
-            if (AT.loadCount > 0)
-                return false;
-
-            animator.runtimeAnimatorController = AT.animator;
-        }
-
-        return true;
-    }
-
     public void Init(short type, GameObject gameObject, Character parent, float speed)
     {
-        GameObject ATObject = new GameObject("AT");
-        AT = ATObject.AddComponent<AddressableTest>();
-
         characterType = (CharacterType)type;
-        state = State.Idle;
+        state = characterType == CharacterType.User ? State.Idle : State.Spawn;
 
         character = gameObject;
         character.transform.parent = parent.transform;
         animator = character.AddComponent<Animator>();
         spriteRenderer = character.AddComponent<SpriteRenderer>();
-        character.SetActive(true);
         character.transform.position = Vector3.zero;
         Transform = character.transform;
 
         this.speed = speed;
 
-        sprites = new Dictionary<string, Sprite>();
+        string sSprite = "";
+        string sAnimator = "";
 
-        AT.Init(sprites, animator.runtimeAnimatorController);
-
-        string loadAddressName = null;
-        string animatorName = null;
-
-        switch (characterType)
+        switch(characterType)
         {
             case CharacterType.User:
-                loadAddressName = "tempUser";
-                animatorName = "playerAnimatorController";
+                {
+                    sSprite += "Undead Survivor\\Sprites\\Farmer 3";
+                    sAnimator += "Undead Survivor\\Animations\\Player\\playerAnimatorController";
+                }
                 break;
             case CharacterType.Monster:
-                loadAddressName = "tempMonster";
+                {
+                    sSprite += "Undead Survivor\\Sprites\\Enemy 0";
+                    sAnimator += "Undead Survivor\\Animations\\Enemy\\AcEnemy 0";
+                }
+                break;
+            default:
+                {
+                    Debug.Log("Character Type Error");
+                }
                 break;
         }
 
-        AT.Load(loadAddressName, animatorName);
+        SetAction();
+
+        // 스프라이트
+        sprites = new Dictionary<string, Sprite>();
+        var rSprites = Resources.LoadAll<Sprite>(sSprite);
+        foreach (var r in rSprites)
+        {
+            sprites.Add(r.name, r);
+        }
+
+        // 애니메이터
+        animator.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>(sAnimator);
     }
 
     public string StateKey(State state)
@@ -178,5 +177,38 @@ public class Character : MonoBehaviour
 
         state = State.Run;
         animator.SetBool("isMove", true);
+    }
+
+    // 나중에 enemy용으로 따로 빼야 한다.
+    public void EnemyUpdate()
+    {
+        actionHandlers[state]?.Invoke();
+    }
+
+    private void SetAction()
+    {
+        if (characterType == CharacterType.User)
+            return;
+
+        actionHandlers = new Dictionary<State, Action>();
+        actionHandlers.Add(State.Spawn, Spwan);
+        actionHandlers.Add(State.Idle, Idle);
+
+    }
+
+    private void Spwan()
+    {
+        Vector2 pos = MapManager.Instance.RandomPos();
+
+        Vector3 tPos = new Vector3((float)pos.x, Transform.position.y, (float)pos.y);
+
+        Transform.position = tPos;
+        character.SetActive(true);
+
+        state = State.Idle;
+    }
+    private void Idle()
+    {
+
     }
 }

@@ -37,7 +37,7 @@ namespace Assets
         private Vector2Int targetPos;
 
         private float delayTime;
-        private Stopwatch sw;
+        private Stopwatch sw = new Stopwatch();
         private float lastTime;
         private State state;
 
