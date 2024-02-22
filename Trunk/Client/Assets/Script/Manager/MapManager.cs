@@ -12,6 +12,7 @@ namespace Assets.Script.Manager
 
         private bool isMapChange = false;
         public bool IsMapChange => isMapChange;
+        public string MapName => mapName.Substring(mapName.LastIndexOf('\\') + 1);
 
         public void Init()
         {
@@ -36,12 +37,19 @@ namespace Assets.Script.Manager
             return true;
         }
 
-        public Vector2 RandomPos(string _mapName = "")
+        public bool RandomPos(out Vector2 randomPos, string _mapName = "")
         {
+            randomPos = Vector2.zero;
+
             if (_mapName.CompareTo("") == 0)
                 _mapName = map.name;
 
-            return AStarPathfinderManager.Instance.RandomPos(_mapName);
+            if (map.transform.childCount <= 0)
+                return false;
+
+            randomPos = AStarPathfinderManager.Instance.RandomPos(_mapName);
+
+            return true;
         }
     }
 

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         user.Init(1, ObjectManager.Instance.GetObject("player"), user, 3.0f);
 
         enemy = ObjectManager.Instance.GetObject("enemy").AddComponent<Character>();
-        enemy.Init(2, ObjectManager.Instance.GetObject("nomal"), user, 2.0f);
+        enemy.Init(2, ObjectManager.Instance.GetObject("nomal"), enemy, 2.0f);
 
         Camera.main.GetComponent<CameraMove>().SetPlayerTransfrom(user.Transform);
 

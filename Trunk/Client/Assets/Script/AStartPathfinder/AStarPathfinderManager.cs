@@ -81,13 +81,20 @@ namespace Assets.Script.AStartPathfinder
 
         public Vector2 RandomPos(string key)
         {
+            var result = Vector2Int.zero;
             if (!dicAStarts.TryGetValue(key, out var map))
-                return Vector2.zero;
+                return result;
 
-            int x = UnityEngine.Random.Range(map.topRight.x, map.bottomLeft.x);
-            int y = UnityEngine.Random.Range(map.topRight.y, map.bottomLeft.y);
+            do
+            {
+                int x = UnityEngine.Random.Range(map.topRight.x, map.bottomLeft.x);
+                int y = UnityEngine.Random.Range(map.topRight.y, map.bottomLeft.y);
 
-            return new Vector2(x, y);
+                result = new Vector2Int(x, y);
+
+            } while (map.IsCollision(result, true) == false);
+
+            return new Vector2(result.x, result.y);
         }
     }
 }

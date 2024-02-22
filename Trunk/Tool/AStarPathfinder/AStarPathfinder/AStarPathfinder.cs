@@ -50,8 +50,8 @@ namespace AStarPathfind
             if (!IsInSize(_stratPos) || !IsInSize(_endPos))
                 return;
 
-            startNode = nodeArray[startPos.x - bottomLeft.x, startPos.y - bottomLeft.y];
-            targetNode = nodeArray[targetPos.x - bottomLeft.x, targetPos.y - bottomLeft.y];
+            startNode = nodeArray[_stratPos.x - bottomLeft.x, _stratPos.y - bottomLeft.y];
+            targetNode = nodeArray[_endPos.x - bottomLeft.x, _endPos.y - bottomLeft.y];
 
             openList.Clear();
             openList.Add(startNode);
@@ -164,6 +164,33 @@ namespace AStarPathfind
                 return false;
 
             return true;
+        }
+
+        public bool IsCollision(Vector2Int pos, bool isFirst = false)
+        {
+            bool result = false;
+            if (pos.x >= bottomLeft.x && pos.x < topRight.x + 1 &&
+                pos.y >= bottomLeft.y && pos.y < topRight.y + 1 &&
+                !nodeArray[pos.x - bottomLeft.x, pos.y - bottomLeft.y].IsWall)
+            {
+                if (isFirst == true)
+                {       // ↗↖↙↘
+                    if (IsCollision(new Vector2Int(pos.x + 1, pos.y + 1)) == true &&
+                        IsCollision(new Vector2Int(pos.x - 1, pos.y + 1)) == true &&
+                        IsCollision(new Vector2Int(pos.x - 1, pos.y - 1)) == true &&
+                        IsCollision(new Vector2Int(pos.x + 1, pos.y - 1)) == true &&
+                        // ↑→↓←
+                        IsCollision(new Vector2Int(pos.x, pos.y + 1)) == true &&
+                        IsCollision(new Vector2Int(pos.x + 1, pos.y)) == true &&
+                        IsCollision(new Vector2Int(pos.x, pos.y - 1)) == true &&
+                        IsCollision(new Vector2Int(pos.x - 1, pos.y)) == true)
+                        result = true;
+                }
+                else
+                    result = true;
+            }
+
+                return result;
         }
     }
 

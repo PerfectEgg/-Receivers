@@ -22,8 +22,8 @@ namespace Assets.Script.WindowEditor
 
         GameObject prefab;
 
-        string saveAddress = Application.dataPath + "//Data//MapData//";
-        string saveDataAddress = Application.dataPath + "//Resources//Prefab//MapPrefab";
+        string saveAddress = Application.dataPath + "/Data//MapData/";
+        string saveDataAddress = Application.dataPath + "/Resources/Prefab/MapPrefab";
         string saveFormat = "json";
         private void OnGUI()
         {
@@ -52,7 +52,7 @@ namespace Assets.Script.WindowEditor
                 string saveName = fileName.Substring(0, fileName.LastIndexOf(".", fileName.Length - 1, fileName.Length));
 
                 //Grid grid = Resources.Load<GameObject>("Prefab\\MapPrefab\\" + saveName).GetComponent<Grid>();
-                prefab = Resources.Load<GameObject>("Prefab//MapPrefab//" + saveName);
+                prefab = Resources.Load<GameObject>("Prefab/MapPrefab/" + saveName);
 
                 if (prefab == null)
                 {
@@ -82,14 +82,14 @@ namespace Assets.Script.WindowEditor
                 // bound
                 AStarPathfind.Bound bound = new AStarPathfind.Bound(SaveTileMap.cellBounds.min.x, SaveTileMap.cellBounds.min.y,
                     SaveTileMap.cellBounds.max.x, SaveTileMap.cellBounds.max.y,
-                    SaveTileMap.cellBounds.size.x, SaveTileMap.cellBounds.size.y);
+                    SaveTileMap.cellBounds.size.x + 1, SaveTileMap.cellBounds.size.y + 1);
 
                 // node
-                AStarPathfind.Node[,] nodes = new AStarPathfind.Node[SaveTileMap.cellBounds.size.x, SaveTileMap.cellBounds.size.y];
+                AStarPathfind.Node[,] nodes = new AStarPathfind.Node[SaveTileMap.cellBounds.size.x + 1, SaveTileMap.cellBounds.size.y + 1];
                 //
-                for (int i = 0; i < SaveTileMap.cellBounds.size.x; ++i)
+                for (int i = 0; i < SaveTileMap.cellBounds.size.x + 1; ++i)
                 {
-                    for (int j = 0; j < SaveTileMap.cellBounds.size.y; ++j)
+                    for (int j = 0; j < SaveTileMap.cellBounds.size.y + 1; ++j)
                     {
                         bool isWall = false;
                         foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(i + SaveTileMap.cellBounds.min.x, j + SaveTileMap.cellBounds.min.y), 0.4f))
