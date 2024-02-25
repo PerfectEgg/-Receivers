@@ -1,59 +1,56 @@
 ﻿using Assets.Script.AStartPathfinder;
 using Assets.Script.LazySingleton;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Assets.Script.Manager
 {
     public class MapManager : LazySingleton<MapManager>
     {
-        private string mapName = "TGrid";
+        private string mapName = "Prefab\\MapPrefab\\TGrid";
         private GameObject map;
 
         private bool isMapChange = false;
         public bool IsMapChange => isMapChange;
+        public string MapName => mapName.Substring(mapName.LastIndexOf('\\') + 1);
 
         public void Init()
         {
-            Addressables.LoadAssetAsync<GameObject>(mapName).Completed +=
-            (AsyncOperationHandle<GameObject> obj) =>
-            {
-                switch (obj.Status)
-                {
-                    case AsyncOperationStatus.Succeeded:
-                        {
-                            map = UnityEngine.Object.Instantiate(obj.Result);
-                            isMapChange = true;
-                        }
-                        break;
-                    case AsyncOperationStatus.Failed:
-                        {
-                            Debug.Log("맵 로드 실패");
-                        }
-                        break;
-                }
-            };
+            map = Resources.Load<GameObject>(mapName);
+            isMapChange = true;
         }
 
         public bool Update(ref GameObject tileMap)
         {
             if (isMapChange == false)
                 return false;
-            ObjectManager.Instance.Destroy(tileMap);
-            tileMap = map;
+            if(tileMap.transform.childCount > 0)
+            {
+                while (tileMap.transform.childCount <= 0)
+                    ObjectManager.Instance.Destroy(tileMap.transform.GetChild(0).gameObject);
+            }
+            var ins = GameObject.Instantiate(map, tileMap.transform);
+            ins.SetActive(true);
 
             isMapChange = false;
 
             return true;
         }
-    }
 
+        public bool RandomPos(out Vector2 randomPos, string _mapName = "")
+        {
+            randomPos = Vector2.zero;
+
+            if (_mapName.CompareTo("") == 0)
+                _mapName = map.name;
+
+            if (map.transform.childCount <= 0)
+                return false;
+
+            randomPos = AStarPathfinderManager.Instance.RandomPos(_mapName);
+
+            return true;
+        }
+    }
 
 }

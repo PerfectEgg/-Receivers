@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Assets.Script.LazySingleton;
 using AStarPathfind;
 using UnityEngine;
@@ -80,6 +77,24 @@ namespace Assets.Script.AStartPathfinder
             map.PathFinding(stratPos, endPos, ref finalNodeList);
 
             return true;
+        }
+
+        public Vector2 RandomPos(string key)
+        {
+            var result = Vector2Int.zero;
+            if (!dicAStarts.TryGetValue(key, out var map))
+                return result;
+
+            do
+            {
+                int x = UnityEngine.Random.Range(map.topRight.x, map.bottomLeft.x);
+                int y = UnityEngine.Random.Range(map.topRight.y, map.bottomLeft.y);
+
+                result = new Vector2Int(x, y);
+
+            } while (map.IsCollision(result, true) == false);
+
+            return new Vector2(result.x, result.y);
         }
     }
 }
