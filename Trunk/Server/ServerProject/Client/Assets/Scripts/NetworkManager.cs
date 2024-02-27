@@ -1,16 +1,24 @@
 using System;
 using UnityEngine;
-using ServerSession;
+using System.Net;
+using DummyClient;
+using ServerCore;
+using System.Collections;
+using System.Collections.Generic;
 
-public class NewBehaviourScript : MonoBehaviour
+public class NetworkManager : MonoBehaviour
 {
     ServerSession _session = new ServerSession();
 
-    // Start is called before the first frame update
+    public void Send(ArraySegment<byte> sendBuff)
+    {
+        _session.Send(sendBuff);
+    }
+
     void Start()
     {
         // DNS을 사용하여 IP 주소를 세팅함.
-        String host = Dns.GetHostName();
+        string host = Dns.GetHostName();
         IPHostEntry ipHost = Dns.GetHostEntry(host);
         IPAddress IPAddr = ipHost.AddressList[0];
         // IP 주소는 식당의 이름, 포트 번호는 식당 문의 위치라고 생각하자.
@@ -21,9 +29,10 @@ public class NewBehaviourScript : MonoBehaviour
         connector.Connect(endPoint, () => { return _session; }, 1);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        List<IPacket> list = PacketQueue.Instance.PopAll();
+        foreach (IPacket packet in list)
+            PacketManager.Instance.HandlePacket(_session, packet);
     }
 }

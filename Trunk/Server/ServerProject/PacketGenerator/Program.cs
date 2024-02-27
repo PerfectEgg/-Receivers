@@ -97,7 +97,7 @@ namespace PacketGenerator
                 if (string.IsNullOrEmpty(memberName)) 
                 {
                     Console.WriteLine("Member without name");
-                    return null;
+                    return new Tuple<string, string, string>("", "", "");
                 }
 
                 if (string.IsNullOrEmpty(memberCode) == false)
@@ -111,7 +111,7 @@ namespace PacketGenerator
                 switch (memberType) 
                 {
                     case "byte":
-                      case "sbyte":
+                    case "sbyte":
                         memberCode += string.Format(PacketFormat.memberFormat, memberType, memberName);
                         readCode += string.Format(PacketFormat.readByteFormat, memberName, memberType);
                         writeCode += string.Format(PacketFormat.writeByteFormat, memberName, memberType);
@@ -133,7 +133,7 @@ namespace PacketGenerator
                         writeCode += string.Format(PacketFormat.writeStringFormat, memberName);
                         break;
                     case "list":
-                        Tuple<string, string, string> t =  ParseList(r);
+                        Tuple<string, string, string> t = ParseList(r);
                         memberCode += t.Item1;
                         readCode += t.Item2;
                         writeCode += t.Item3;
@@ -155,7 +155,7 @@ namespace PacketGenerator
             if (string.IsNullOrEmpty(listName))
             {
                 Console.WriteLine("List without name");
-                return null;
+                return new Tuple<string, string, string>("", "", "");
             }
 
             Tuple<string, string, string> t = ParseMembers(r);
@@ -171,7 +171,7 @@ namespace PacketGenerator
                 FirstCharToUpper(listName), FirstCharToLower(listName));
 
             memberCode = memberCode.Replace("\n", "\n");
-            readCode = readCode.Replace("\n" , "\n");
+            readCode = readCode.Replace("\n", "\n");
             writeCode = writeCode.Replace("\n", "\n\t");
 
             return new Tuple<string, string, string> (memberCode, readCode, writeCode);

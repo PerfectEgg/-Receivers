@@ -8,12 +8,27 @@ using System.Threading.Tasks;
 
 internal class PacketHandler
 {
-    public static void S_ChatHandler(PacketSession session, IPacket packet)
+    public static void S_BroadcastEnterGameHandler(PacketSession session, IPacket packet)
     {
-        S_Chat chatPacket = packet as S_Chat;
+        S_BroadcastEnterGame pkt = packet as S_BroadcastEnterGame;
         ServerSession serverSession = session as ServerSession;
+    }
 
-        //if (chatPacket.playerID == 1)
-        //    Console.WriteLine(chatPacket.chat);
+    public static void S_BroadcastLaaveGameHandler(PacketSession session, IPacket packet)
+    {
+        S_BroadcastLaaveGame pkt = packet as S_BroadcastLaaveGame;
+        ServerSession serverSession = session as ServerSession;
+    }
+
+    public static void S_PlayerListHandler(PacketSession session, IPacket packet)
+    {
+        S_PlayerList pkt = packet as S_PlayerList;
+        ServerSession serverSession = session as ServerSession;
+    }
+
+    public static void S_BroadcastMoveHandler(PacketSession session, IPacket packet)
+    {
+        S_BroadcastMove pkt = packet as S_BroadcastMove;
+        ServerSession serverSession = session as ServerSession;
     }
 }

@@ -34,7 +34,7 @@ namespace ServerCore
                 return;
              
             bool pending = socket.ConnectAsync(args);
-            if (pending = false)
+            if (pending == false)
                 OnConnectCompleted(null, args);
         }
 

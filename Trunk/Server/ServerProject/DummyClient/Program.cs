@@ -15,7 +15,7 @@ namespace DummyClient
         static void Main(string[] args)
         {
             // DNS을 사용하여 IP 주소를 세팅함.
-            String host = Dns.GetHostName();
+            string host = Dns.GetHostName();
             IPHostEntry ipHost = Dns.GetHostEntry(host);
             IPAddress IPAddr = ipHost.AddressList[0];
             // IP 주소는 식당의 이름, 포트 번호는 식당 문의 위치라고 생각하자.

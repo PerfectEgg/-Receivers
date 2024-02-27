@@ -53,6 +53,7 @@ namespace ServerCore
         {
             if (numOfBytes > DateSize)
                 return false;
+
             _readPos += numOfBytes;
             return true;
         }
@@ -61,6 +62,7 @@ namespace ServerCore
         {
             if (numOfBytes > FreeSize)
                 return false;
+
             _writePos += numOfBytes;
             return true;
         }

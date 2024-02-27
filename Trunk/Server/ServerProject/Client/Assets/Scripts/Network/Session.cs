@@ -136,9 +136,9 @@ namespace ServerCore
 
             try
             {
-                bool pending = _socket.ReceiveAsync(_sendArgs);
+                bool pending = _socket.SendAsync(_sendArgs);
                 if (pending == false)
-                    OnRecvCompleted(null, _sendArgs);
+                    OnSendCompleted(null, _sendArgs);
             }
             catch (Exception e)
             {
@@ -208,7 +208,7 @@ namespace ServerCore
                     }
 
                     int processLen = OnRecv(_recvBuffer.ReadSegment);
-                    if (processLen > 0)
+                    if (processLen < 0 || _recvBuffer.DateSize < processLen)
                     {
                         Disconnect();
                         return;

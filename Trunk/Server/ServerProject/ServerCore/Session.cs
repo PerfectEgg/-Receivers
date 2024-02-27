@@ -66,11 +66,8 @@ namespace ServerCore
         }
 
         public abstract void OnConnected(EndPoint endPoint);
-
         public abstract int OnRecv(ArraySegment<byte> buffer);
-
         public abstract void OnSend(int numOfBytes);
-
         public abstract void OnDisconnected(EndPoint endPoint);
 
         public void Start(Socket socket)
@@ -131,14 +128,14 @@ namespace ServerCore
                 ArraySegment<byte> buffer = _sendQueue.Dequeue();
                 _pendinglist.Add(buffer);
             }
-
-            _sendArgs.BufferList = _pendinglist;
-
+            
             try
             {
-                bool pending = _socket.ReceiveAsync(_sendArgs);
+                _sendArgs.BufferList = _pendinglist;
+
+                bool pending = _socket.SendAsync(_sendArgs);
                 if (pending == false)
-                    OnRecvCompleted(null, _sendArgs);
+                    OnSendCompleted(null, _sendArgs);
             }
             catch (Exception e)
             {
@@ -208,7 +205,7 @@ namespace ServerCore
                     }
 
                     int processLen = OnRecv(_recvBuffer.ReadSegment);
-                    if (processLen > 0)
+                    if (processLen < 0 || _recvBuffer.DateSize < processLen)
                     {
                         Disconnect();
                         return;
