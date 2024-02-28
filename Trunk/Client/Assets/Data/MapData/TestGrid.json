@@ -4,8 +4,8 @@
     "MinY": -11,
     "MaxX": 24,
     "MaxY": 11,
-    "SizeX": 48,
-    "SizeY": 22
+    "SizeX": 49,
+    "SizeY": 23
   },
   "Node": {
     "0,0": {
@@ -140,6 +140,12 @@
       "X": -24,
       "Y": 10
     },
+    "0,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -24,
+      "Y": 11
+    },
     "1,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -271,6 +277,12 @@
       "IsMoveAbleObj": false,
       "X": -23,
       "Y": 10
+    },
+    "1,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -23,
+      "Y": 11
     },
     "2,0": {
       "IsWall": true,
@@ -404,6 +416,12 @@
       "X": -22,
       "Y": 10
     },
+    "2,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -22,
+      "Y": 11
+    },
     "3,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -535,6 +553,12 @@
       "IsMoveAbleObj": false,
       "X": -21,
       "Y": 10
+    },
+    "3,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -21,
+      "Y": 11
     },
     "4,0": {
       "IsWall": true,
@@ -668,6 +692,12 @@
       "X": -20,
       "Y": 10
     },
+    "4,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -20,
+      "Y": 11
+    },
     "5,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -799,6 +829,12 @@
       "IsMoveAbleObj": false,
       "X": -19,
       "Y": 10
+    },
+    "5,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -19,
+      "Y": 11
     },
     "6,0": {
       "IsWall": true,
@@ -932,6 +968,12 @@
       "X": -18,
       "Y": 10
     },
+    "6,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -18,
+      "Y": 11
+    },
     "7,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -1063,6 +1105,12 @@
       "IsMoveAbleObj": false,
       "X": -17,
       "Y": 10
+    },
+    "7,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -17,
+      "Y": 11
     },
     "8,0": {
       "IsWall": true,
@@ -1196,6 +1244,12 @@
       "X": -16,
       "Y": 10
     },
+    "8,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -16,
+      "Y": 11
+    },
     "9,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -1327,6 +1381,12 @@
       "IsMoveAbleObj": false,
       "X": -15,
       "Y": 10
+    },
+    "9,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -15,
+      "Y": 11
     },
     "10,0": {
       "IsWall": true,
@@ -1460,6 +1520,12 @@
       "X": -14,
       "Y": 10
     },
+    "10,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -14,
+      "Y": 11
+    },
     "11,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -1591,6 +1657,12 @@
       "IsMoveAbleObj": false,
       "X": -13,
       "Y": 10
+    },
+    "11,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -13,
+      "Y": 11
     },
     "12,0": {
       "IsWall": true,
@@ -1724,6 +1796,12 @@
       "X": -12,
       "Y": 10
     },
+    "12,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -12,
+      "Y": 11
+    },
     "13,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -1855,6 +1933,12 @@
       "IsMoveAbleObj": false,
       "X": -11,
       "Y": 10
+    },
+    "13,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -11,
+      "Y": 11
     },
     "14,0": {
       "IsWall": true,
@@ -1988,6 +2072,12 @@
       "X": -10,
       "Y": 10
     },
+    "14,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -10,
+      "Y": 11
+    },
     "15,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -2103,13 +2193,13 @@
       "Y": 7
     },
     "15,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -9,
       "Y": 8
     },
     "15,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -9,
       "Y": 9
@@ -2119,6 +2209,12 @@
       "IsMoveAbleObj": false,
       "X": -9,
       "Y": 10
+    },
+    "15,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -9,
+      "Y": 11
     },
     "16,0": {
       "IsWall": true,
@@ -2229,19 +2325,19 @@
       "Y": 6
     },
     "16,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -8,
       "Y": 7
     },
     "16,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -8,
       "Y": 8
     },
     "16,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -8,
       "Y": 9
@@ -2251,6 +2347,12 @@
       "IsMoveAbleObj": false,
       "X": -8,
       "Y": 10
+    },
+    "16,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -8,
+      "Y": 11
     },
     "17,0": {
       "IsWall": true,
@@ -2361,19 +2463,19 @@
       "Y": 6
     },
     "17,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -7,
       "Y": 7
     },
     "17,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -7,
       "Y": 8
     },
     "17,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -7,
       "Y": 9
@@ -2383,6 +2485,12 @@
       "IsMoveAbleObj": false,
       "X": -7,
       "Y": 10
+    },
+    "17,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -7,
+      "Y": 11
     },
     "18,0": {
       "IsWall": true,
@@ -2493,19 +2601,19 @@
       "Y": 6
     },
     "18,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -6,
       "Y": 7
     },
     "18,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -6,
       "Y": 8
     },
     "18,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -6,
       "Y": 9
@@ -2515,6 +2623,12 @@
       "IsMoveAbleObj": false,
       "X": -6,
       "Y": 10
+    },
+    "18,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -6,
+      "Y": 11
     },
     "19,0": {
       "IsWall": true,
@@ -2625,19 +2739,19 @@
       "Y": 6
     },
     "19,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -5,
       "Y": 7
     },
     "19,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -5,
       "Y": 8
     },
     "19,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -5,
       "Y": 9
@@ -2647,6 +2761,12 @@
       "IsMoveAbleObj": false,
       "X": -5,
       "Y": 10
+    },
+    "19,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -5,
+      "Y": 11
     },
     "20,0": {
       "IsWall": true,
@@ -2769,7 +2889,7 @@
       "Y": 8
     },
     "20,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -4,
       "Y": 9
@@ -2779,6 +2899,12 @@
       "IsMoveAbleObj": false,
       "X": -4,
       "Y": 10
+    },
+    "20,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -4,
+      "Y": 11
     },
     "21,0": {
       "IsWall": true,
@@ -2901,7 +3027,7 @@
       "Y": 8
     },
     "21,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -3,
       "Y": 9
@@ -2911,6 +3037,12 @@
       "IsMoveAbleObj": false,
       "X": -3,
       "Y": 10
+    },
+    "21,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -3,
+      "Y": 11
     },
     "22,0": {
       "IsWall": true,
@@ -3033,7 +3165,7 @@
       "Y": 8
     },
     "22,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -2,
       "Y": 9
@@ -3043,6 +3175,12 @@
       "IsMoveAbleObj": false,
       "X": -2,
       "Y": 10
+    },
+    "22,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -2,
+      "Y": 11
     },
     "23,0": {
       "IsWall": true,
@@ -3165,7 +3303,7 @@
       "Y": 8
     },
     "23,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -1,
       "Y": 9
@@ -3175,6 +3313,12 @@
       "IsMoveAbleObj": false,
       "X": -1,
       "Y": 10
+    },
+    "23,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": -1,
+      "Y": 11
     },
     "24,0": {
       "IsWall": true,
@@ -3297,7 +3441,7 @@
       "Y": 8
     },
     "24,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 0,
       "Y": 9
@@ -3307,6 +3451,12 @@
       "IsMoveAbleObj": false,
       "X": 0,
       "Y": 10
+    },
+    "24,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 0,
+      "Y": 11
     },
     "25,0": {
       "IsWall": true,
@@ -3429,7 +3579,7 @@
       "Y": 8
     },
     "25,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 1,
       "Y": 9
@@ -3439,6 +3589,12 @@
       "IsMoveAbleObj": false,
       "X": 1,
       "Y": 10
+    },
+    "25,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 1,
+      "Y": 11
     },
     "26,0": {
       "IsWall": true,
@@ -3561,7 +3717,7 @@
       "Y": 8
     },
     "26,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 2,
       "Y": 9
@@ -3571,6 +3727,12 @@
       "IsMoveAbleObj": false,
       "X": 2,
       "Y": 10
+    },
+    "26,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 2,
+      "Y": 11
     },
     "27,0": {
       "IsWall": true,
@@ -3693,7 +3855,7 @@
       "Y": 8
     },
     "27,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 3,
       "Y": 9
@@ -3703,6 +3865,12 @@
       "IsMoveAbleObj": false,
       "X": 3,
       "Y": 10
+    },
+    "27,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 3,
+      "Y": 11
     },
     "28,0": {
       "IsWall": true,
@@ -3825,7 +3993,7 @@
       "Y": 8
     },
     "28,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 4,
       "Y": 9
@@ -3835,6 +4003,12 @@
       "IsMoveAbleObj": false,
       "X": 4,
       "Y": 10
+    },
+    "28,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 4,
+      "Y": 11
     },
     "29,0": {
       "IsWall": true,
@@ -3957,7 +4131,7 @@
       "Y": 8
     },
     "29,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 5,
       "Y": 9
@@ -3967,6 +4141,12 @@
       "IsMoveAbleObj": false,
       "X": 5,
       "Y": 10
+    },
+    "29,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 5,
+      "Y": 11
     },
     "30,0": {
       "IsWall": true,
@@ -4089,7 +4269,7 @@
       "Y": 8
     },
     "30,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 6,
       "Y": 9
@@ -4099,6 +4279,12 @@
       "IsMoveAbleObj": false,
       "X": 6,
       "Y": 10
+    },
+    "30,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 6,
+      "Y": 11
     },
     "31,0": {
       "IsWall": true,
@@ -4221,7 +4407,7 @@
       "Y": 8
     },
     "31,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 7,
       "Y": 9
@@ -4231,6 +4417,12 @@
       "IsMoveAbleObj": false,
       "X": 7,
       "Y": 10
+    },
+    "31,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 7,
+      "Y": 11
     },
     "32,0": {
       "IsWall": true,
@@ -4341,19 +4533,19 @@
       "Y": 6
     },
     "32,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 8,
       "Y": 7
     },
     "32,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 8,
       "Y": 8
     },
     "32,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 8,
       "Y": 9
@@ -4363,6 +4555,12 @@
       "IsMoveAbleObj": false,
       "X": 8,
       "Y": 10
+    },
+    "32,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 8,
+      "Y": 11
     },
     "33,0": {
       "IsWall": true,
@@ -4473,19 +4671,19 @@
       "Y": 6
     },
     "33,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 9,
       "Y": 7
     },
     "33,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 9,
       "Y": 8
     },
     "33,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 9,
       "Y": 9
@@ -4495,6 +4693,12 @@
       "IsMoveAbleObj": false,
       "X": 9,
       "Y": 10
+    },
+    "33,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 9,
+      "Y": 11
     },
     "34,0": {
       "IsWall": true,
@@ -4605,19 +4809,19 @@
       "Y": 6
     },
     "34,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 10,
       "Y": 7
     },
     "34,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 10,
       "Y": 8
     },
     "34,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 10,
       "Y": 9
@@ -4627,6 +4831,12 @@
       "IsMoveAbleObj": false,
       "X": 10,
       "Y": 10
+    },
+    "34,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 10,
+      "Y": 11
     },
     "35,0": {
       "IsWall": true,
@@ -4737,19 +4947,19 @@
       "Y": 6
     },
     "35,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 11,
       "Y": 7
     },
     "35,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 11,
       "Y": 8
     },
     "35,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 11,
       "Y": 9
@@ -4759,6 +4969,12 @@
       "IsMoveAbleObj": false,
       "X": 11,
       "Y": 10
+    },
+    "35,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 11,
+      "Y": 11
     },
     "36,0": {
       "IsWall": true,
@@ -4869,19 +5085,19 @@
       "Y": 6
     },
     "36,18": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 12,
       "Y": 7
     },
     "36,19": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 12,
       "Y": 8
     },
     "36,20": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 12,
       "Y": 9
@@ -4891,6 +5107,12 @@
       "IsMoveAbleObj": false,
       "X": 12,
       "Y": 10
+    },
+    "36,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 12,
+      "Y": 11
     },
     "37,0": {
       "IsWall": true,
@@ -5024,6 +5246,12 @@
       "X": 13,
       "Y": 10
     },
+    "37,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 13,
+      "Y": 11
+    },
     "38,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -5155,6 +5383,12 @@
       "IsMoveAbleObj": false,
       "X": 14,
       "Y": 10
+    },
+    "38,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 14,
+      "Y": 11
     },
     "39,0": {
       "IsWall": true,
@@ -5288,6 +5522,12 @@
       "X": 15,
       "Y": 10
     },
+    "39,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 15,
+      "Y": 11
+    },
     "40,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -5419,6 +5659,12 @@
       "IsMoveAbleObj": false,
       "X": 16,
       "Y": 10
+    },
+    "40,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 16,
+      "Y": 11
     },
     "41,0": {
       "IsWall": true,
@@ -5552,6 +5798,12 @@
       "X": 17,
       "Y": 10
     },
+    "41,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 17,
+      "Y": 11
+    },
     "42,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -5683,6 +5935,12 @@
       "IsMoveAbleObj": false,
       "X": 18,
       "Y": 10
+    },
+    "42,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 18,
+      "Y": 11
     },
     "43,0": {
       "IsWall": true,
@@ -5816,6 +6074,12 @@
       "X": 19,
       "Y": 10
     },
+    "43,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 19,
+      "Y": 11
+    },
     "44,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -5947,6 +6211,12 @@
       "IsMoveAbleObj": false,
       "X": 20,
       "Y": 10
+    },
+    "44,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 20,
+      "Y": 11
     },
     "45,0": {
       "IsWall": true,
@@ -6080,6 +6350,12 @@
       "X": 21,
       "Y": 10
     },
+    "45,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 21,
+      "Y": 11
+    },
     "46,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -6212,6 +6488,12 @@
       "X": 22,
       "Y": 10
     },
+    "46,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 22,
+      "Y": 11
+    },
     "47,0": {
       "IsWall": true,
       "IsMoveAbleObj": false,
@@ -6343,6 +6625,150 @@
       "IsMoveAbleObj": false,
       "X": 23,
       "Y": 10
+    },
+    "47,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 23,
+      "Y": 11
+    },
+    "48,0": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -11
+    },
+    "48,1": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -10
+    },
+    "48,2": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -9
+    },
+    "48,3": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -8
+    },
+    "48,4": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -7
+    },
+    "48,5": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -6
+    },
+    "48,6": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -5
+    },
+    "48,7": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -4
+    },
+    "48,8": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -3
+    },
+    "48,9": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -2
+    },
+    "48,10": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": -1
+    },
+    "48,11": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 0
+    },
+    "48,12": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 1
+    },
+    "48,13": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 2
+    },
+    "48,14": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 3
+    },
+    "48,15": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 4
+    },
+    "48,16": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 5
+    },
+    "48,17": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 6
+    },
+    "48,18": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 7
+    },
+    "48,19": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 8
+    },
+    "48,20": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 9
+    },
+    "48,21": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 10
+    },
+    "48,22": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 11
     }
   }
 }
