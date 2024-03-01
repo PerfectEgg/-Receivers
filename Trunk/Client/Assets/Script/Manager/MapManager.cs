@@ -20,6 +20,9 @@ namespace Assets.Script.Manager
             isMapChange = true;
         }
 
+        public void SetMapName(string mapName)
+        { this.mapName = mapName; }
+
         public bool Update(ref GameObject tileMap)
         {
             if (isMapChange == false)
