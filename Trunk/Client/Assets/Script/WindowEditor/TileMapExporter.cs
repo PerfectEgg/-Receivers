@@ -2,12 +2,7 @@
 using UnityEngine;
 using AStarPathfind;
 using UnityEngine.Tilemaps;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using System.IO;
-using System.Linq;
-using Newtonsoft.Json.Linq;
-using Unity.VisualScripting;
 
 namespace Assets.Script.WindowEditor
 {

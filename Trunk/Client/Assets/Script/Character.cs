@@ -1,13 +1,9 @@
 using Assets.Script.AStartPathfinder;
 using Assets.Script.Manager;
 using AStarPathfind;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using static UnityEngine.GraphicsBuffer;
 
 // 나중에 플레이어, 적 클래스 나누기.
 public class Character : MonoBehaviour
