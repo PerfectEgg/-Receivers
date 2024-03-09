@@ -3,9 +3,9 @@
     "MinX": -33,
     "MinY": -36,
     "MaxX": 143,
-    "MaxY": 52,
+    "MaxY": 53,
     "SizeX": 177,
-    "SizeY": 89
+    "SizeY": 90
   },
   "Node": {
     "0,0": {
@@ -201,13 +201,13 @@
       "Y": -5
     },
     "0,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -33,
       "Y": -4
     },
     "0,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -33,
       "Y": -3
@@ -542,6 +542,12 @@
       "X": -33,
       "Y": 52
     },
+    "0,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -33,
+      "Y": 53
+    },
     "1,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -735,13 +741,13 @@
       "Y": -5
     },
     "1,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -32,
       "Y": -4
     },
     "1,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -32,
       "Y": -3
@@ -1076,6 +1082,12 @@
       "X": -32,
       "Y": 52
     },
+    "1,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -32,
+      "Y": 53
+    },
     "2,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -1269,13 +1281,13 @@
       "Y": -5
     },
     "2,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -31,
       "Y": -4
     },
     "2,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -31,
       "Y": -3
@@ -1610,6 +1622,12 @@
       "X": -31,
       "Y": 52
     },
+    "2,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -31,
+      "Y": 53
+    },
     "3,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -1803,13 +1821,13 @@
       "Y": -5
     },
     "3,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -30,
       "Y": -4
     },
     "3,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -30,
       "Y": -3
@@ -2144,6 +2162,12 @@
       "X": -30,
       "Y": 52
     },
+    "3,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -30,
+      "Y": 53
+    },
     "4,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -2337,13 +2361,13 @@
       "Y": -5
     },
     "4,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -29,
       "Y": -4
     },
     "4,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -29,
       "Y": -3
@@ -2678,6 +2702,12 @@
       "X": -29,
       "Y": 52
     },
+    "4,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -29,
+      "Y": 53
+    },
     "5,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -2871,13 +2901,13 @@
       "Y": -5
     },
     "5,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -28,
       "Y": -4
     },
     "5,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": -28,
       "Y": -3
@@ -3211,6 +3241,12 @@
       "IsMoveAbleObj": false,
       "X": -28,
       "Y": 52
+    },
+    "5,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -28,
+      "Y": 53
     },
     "6,0": {
       "IsWall": false,
@@ -3746,6 +3782,12 @@
       "X": -27,
       "Y": 52
     },
+    "6,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -27,
+      "Y": 53
+    },
     "7,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -4279,6 +4321,12 @@
       "IsMoveAbleObj": false,
       "X": -26,
       "Y": 52
+    },
+    "7,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -26,
+      "Y": 53
     },
     "8,0": {
       "IsWall": false,
@@ -4814,6 +4862,12 @@
       "X": -25,
       "Y": 52
     },
+    "8,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -25,
+      "Y": 53
+    },
     "9,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -5347,6 +5401,12 @@
       "IsMoveAbleObj": false,
       "X": -24,
       "Y": 52
+    },
+    "9,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -24,
+      "Y": 53
     },
     "10,0": {
       "IsWall": false,
@@ -5882,6 +5942,12 @@
       "X": -23,
       "Y": 52
     },
+    "10,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -23,
+      "Y": 53
+    },
     "11,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -6415,6 +6481,12 @@
       "IsMoveAbleObj": false,
       "X": -22,
       "Y": 52
+    },
+    "11,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -22,
+      "Y": 53
     },
     "12,0": {
       "IsWall": false,
@@ -6950,6 +7022,12 @@
       "X": -21,
       "Y": 52
     },
+    "12,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -21,
+      "Y": 53
+    },
     "13,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -7483,6 +7561,12 @@
       "IsMoveAbleObj": false,
       "X": -20,
       "Y": 52
+    },
+    "13,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -20,
+      "Y": 53
     },
     "14,0": {
       "IsWall": false,
@@ -8018,6 +8102,12 @@
       "X": -19,
       "Y": 52
     },
+    "14,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -19,
+      "Y": 53
+    },
     "15,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -8551,6 +8641,12 @@
       "IsMoveAbleObj": false,
       "X": -18,
       "Y": 52
+    },
+    "15,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -18,
+      "Y": 53
     },
     "16,0": {
       "IsWall": false,
@@ -9086,6 +9182,12 @@
       "X": -17,
       "Y": 52
     },
+    "16,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -17,
+      "Y": 53
+    },
     "17,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -9619,6 +9721,12 @@
       "IsMoveAbleObj": false,
       "X": -16,
       "Y": 52
+    },
+    "17,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -16,
+      "Y": 53
     },
     "18,0": {
       "IsWall": false,
@@ -10154,6 +10262,12 @@
       "X": -15,
       "Y": 52
     },
+    "18,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -15,
+      "Y": 53
+    },
     "19,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -10687,6 +10801,12 @@
       "IsMoveAbleObj": false,
       "X": -14,
       "Y": 52
+    },
+    "19,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -14,
+      "Y": 53
     },
     "20,0": {
       "IsWall": false,
@@ -11222,6 +11342,12 @@
       "X": -13,
       "Y": 52
     },
+    "20,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -13,
+      "Y": 53
+    },
     "21,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -11755,6 +11881,12 @@
       "IsMoveAbleObj": false,
       "X": -12,
       "Y": 52
+    },
+    "21,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -12,
+      "Y": 53
     },
     "22,0": {
       "IsWall": false,
@@ -12290,6 +12422,12 @@
       "X": -11,
       "Y": 52
     },
+    "22,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -11,
+      "Y": 53
+    },
     "23,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -12823,6 +12961,12 @@
       "IsMoveAbleObj": false,
       "X": -10,
       "Y": 52
+    },
+    "23,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -10,
+      "Y": 53
     },
     "24,0": {
       "IsWall": false,
@@ -13358,6 +13502,12 @@
       "X": -9,
       "Y": 52
     },
+    "24,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -9,
+      "Y": 53
+    },
     "25,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -13891,6 +14041,12 @@
       "IsMoveAbleObj": false,
       "X": -8,
       "Y": 52
+    },
+    "25,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -8,
+      "Y": 53
     },
     "26,0": {
       "IsWall": false,
@@ -14426,6 +14582,12 @@
       "X": -7,
       "Y": 52
     },
+    "26,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -7,
+      "Y": 53
+    },
     "27,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -14959,6 +15121,12 @@
       "IsMoveAbleObj": false,
       "X": -6,
       "Y": 52
+    },
+    "27,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -6,
+      "Y": 53
     },
     "28,0": {
       "IsWall": false,
@@ -15494,6 +15662,12 @@
       "X": -5,
       "Y": 52
     },
+    "28,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -5,
+      "Y": 53
+    },
     "29,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -16027,6 +16201,12 @@
       "IsMoveAbleObj": false,
       "X": -4,
       "Y": 52
+    },
+    "29,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -4,
+      "Y": 53
     },
     "30,0": {
       "IsWall": false,
@@ -16562,6 +16742,12 @@
       "X": -3,
       "Y": 52
     },
+    "30,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -3,
+      "Y": 53
+    },
     "31,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -17095,6 +17281,12 @@
       "IsMoveAbleObj": false,
       "X": -2,
       "Y": 52
+    },
+    "31,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -2,
+      "Y": 53
     },
     "32,0": {
       "IsWall": false,
@@ -17630,6 +17822,12 @@
       "X": -1,
       "Y": 52
     },
+    "32,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": -1,
+      "Y": 53
+    },
     "33,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -18163,6 +18361,12 @@
       "IsMoveAbleObj": false,
       "X": 0,
       "Y": 52
+    },
+    "33,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 0,
+      "Y": 53
     },
     "34,0": {
       "IsWall": false,
@@ -18698,6 +18902,12 @@
       "X": 1,
       "Y": 52
     },
+    "34,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 1,
+      "Y": 53
+    },
     "35,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -19231,6 +19441,12 @@
       "IsMoveAbleObj": false,
       "X": 2,
       "Y": 52
+    },
+    "35,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 2,
+      "Y": 53
     },
     "36,0": {
       "IsWall": false,
@@ -19766,6 +19982,12 @@
       "X": 3,
       "Y": 52
     },
+    "36,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 3,
+      "Y": 53
+    },
     "37,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -20299,6 +20521,12 @@
       "IsMoveAbleObj": false,
       "X": 4,
       "Y": 52
+    },
+    "37,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 4,
+      "Y": 53
     },
     "38,0": {
       "IsWall": false,
@@ -20834,6 +21062,12 @@
       "X": 5,
       "Y": 52
     },
+    "38,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 5,
+      "Y": 53
+    },
     "39,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -21367,6 +21601,12 @@
       "IsMoveAbleObj": false,
       "X": 6,
       "Y": 52
+    },
+    "39,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 6,
+      "Y": 53
     },
     "40,0": {
       "IsWall": false,
@@ -21902,6 +22142,12 @@
       "X": 7,
       "Y": 52
     },
+    "40,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 7,
+      "Y": 53
+    },
     "41,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -22435,6 +22681,12 @@
       "IsMoveAbleObj": false,
       "X": 8,
       "Y": 52
+    },
+    "41,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 8,
+      "Y": 53
     },
     "42,0": {
       "IsWall": false,
@@ -22970,6 +23222,12 @@
       "X": 9,
       "Y": 52
     },
+    "42,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 9,
+      "Y": 53
+    },
     "43,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -23503,6 +23761,12 @@
       "IsMoveAbleObj": false,
       "X": 10,
       "Y": 52
+    },
+    "43,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 10,
+      "Y": 53
     },
     "44,0": {
       "IsWall": false,
@@ -24038,6 +24302,12 @@
       "X": 11,
       "Y": 52
     },
+    "44,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 11,
+      "Y": 53
+    },
     "45,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -24571,6 +24841,12 @@
       "IsMoveAbleObj": false,
       "X": 12,
       "Y": 52
+    },
+    "45,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 12,
+      "Y": 53
     },
     "46,0": {
       "IsWall": false,
@@ -25106,6 +25382,12 @@
       "X": 13,
       "Y": 52
     },
+    "46,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 13,
+      "Y": 53
+    },
     "47,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -25639,6 +25921,12 @@
       "IsMoveAbleObj": false,
       "X": 14,
       "Y": 52
+    },
+    "47,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 14,
+      "Y": 53
     },
     "48,0": {
       "IsWall": false,
@@ -26174,6 +26462,12 @@
       "X": 15,
       "Y": 52
     },
+    "48,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 15,
+      "Y": 53
+    },
     "49,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -26707,6 +27001,12 @@
       "IsMoveAbleObj": false,
       "X": 16,
       "Y": 52
+    },
+    "49,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 16,
+      "Y": 53
     },
     "50,0": {
       "IsWall": false,
@@ -27242,6 +27542,12 @@
       "X": 17,
       "Y": 52
     },
+    "50,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 17,
+      "Y": 53
+    },
     "51,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -27775,6 +28081,12 @@
       "IsMoveAbleObj": false,
       "X": 18,
       "Y": 52
+    },
+    "51,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 18,
+      "Y": 53
     },
     "52,0": {
       "IsWall": false,
@@ -28310,6 +28622,12 @@
       "X": 19,
       "Y": 52
     },
+    "52,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 19,
+      "Y": 53
+    },
     "53,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -28843,6 +29161,12 @@
       "IsMoveAbleObj": false,
       "X": 20,
       "Y": 52
+    },
+    "53,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 20,
+      "Y": 53
     },
     "54,0": {
       "IsWall": false,
@@ -29378,6 +29702,12 @@
       "X": 21,
       "Y": 52
     },
+    "54,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 21,
+      "Y": 53
+    },
     "55,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -29911,6 +30241,12 @@
       "IsMoveAbleObj": false,
       "X": 22,
       "Y": 52
+    },
+    "55,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 22,
+      "Y": 53
     },
     "56,0": {
       "IsWall": false,
@@ -30446,6 +30782,12 @@
       "X": 23,
       "Y": 52
     },
+    "56,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 23,
+      "Y": 53
+    },
     "57,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -30639,13 +30981,13 @@
       "Y": -5
     },
     "57,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 24,
       "Y": -4
     },
     "57,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 24,
       "Y": -3
@@ -30980,6 +31322,12 @@
       "X": 24,
       "Y": 52
     },
+    "57,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 24,
+      "Y": 53
+    },
     "58,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -31173,13 +31521,13 @@
       "Y": -5
     },
     "58,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 25,
       "Y": -4
     },
     "58,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 25,
       "Y": -3
@@ -31514,6 +31862,12 @@
       "X": 25,
       "Y": 52
     },
+    "58,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 25,
+      "Y": 53
+    },
     "59,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -31707,13 +32061,13 @@
       "Y": -5
     },
     "59,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 26,
       "Y": -4
     },
     "59,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 26,
       "Y": -3
@@ -32048,6 +32402,12 @@
       "X": 26,
       "Y": 52
     },
+    "59,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 26,
+      "Y": 53
+    },
     "60,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -32241,13 +32601,13 @@
       "Y": -5
     },
     "60,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 27,
       "Y": -4
     },
     "60,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 27,
       "Y": -3
@@ -32582,6 +32942,12 @@
       "X": 27,
       "Y": 52
     },
+    "60,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 27,
+      "Y": 53
+    },
     "61,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -32775,13 +33141,13 @@
       "Y": -5
     },
     "61,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 28,
       "Y": -4
     },
     "61,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 28,
       "Y": -3
@@ -33116,6 +33482,12 @@
       "X": 28,
       "Y": 52
     },
+    "61,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 28,
+      "Y": 53
+    },
     "62,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -33309,13 +33681,13 @@
       "Y": -5
     },
     "62,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 29,
       "Y": -4
     },
     "62,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 29,
       "Y": -3
@@ -33650,6 +34022,12 @@
       "X": 29,
       "Y": 52
     },
+    "62,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 29,
+      "Y": 53
+    },
     "63,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -33843,13 +34221,13 @@
       "Y": -5
     },
     "63,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 30,
       "Y": -4
     },
     "63,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 30,
       "Y": -3
@@ -34184,6 +34562,12 @@
       "X": 30,
       "Y": 52
     },
+    "63,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 30,
+      "Y": 53
+    },
     "64,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -34377,13 +34761,13 @@
       "Y": -5
     },
     "64,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 31,
       "Y": -4
     },
     "64,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 31,
       "Y": -3
@@ -34718,6 +35102,12 @@
       "X": 31,
       "Y": 52
     },
+    "64,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 31,
+      "Y": 53
+    },
     "65,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -34911,13 +35301,13 @@
       "Y": -5
     },
     "65,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 32,
       "Y": -4
     },
     "65,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 32,
       "Y": -3
@@ -35252,6 +35642,12 @@
       "X": 32,
       "Y": 52
     },
+    "65,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 32,
+      "Y": 53
+    },
     "66,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -35445,13 +35841,13 @@
       "Y": -5
     },
     "66,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 33,
       "Y": -4
     },
     "66,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 33,
       "Y": -3
@@ -35786,6 +36182,12 @@
       "X": 33,
       "Y": 52
     },
+    "66,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 33,
+      "Y": 53
+    },
     "67,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -35979,13 +36381,13 @@
       "Y": -5
     },
     "67,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 34,
       "Y": -4
     },
     "67,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 34,
       "Y": -3
@@ -36320,6 +36722,12 @@
       "X": 34,
       "Y": 52
     },
+    "67,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 34,
+      "Y": 53
+    },
     "68,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -36513,13 +36921,13 @@
       "Y": -5
     },
     "68,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 35,
       "Y": -4
     },
     "68,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 35,
       "Y": -3
@@ -36854,6 +37262,12 @@
       "X": 35,
       "Y": 52
     },
+    "68,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 35,
+      "Y": 53
+    },
     "69,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -37047,13 +37461,13 @@
       "Y": -5
     },
     "69,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 36,
       "Y": -4
     },
     "69,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 36,
       "Y": -3
@@ -37388,6 +37802,12 @@
       "X": 36,
       "Y": 52
     },
+    "69,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 36,
+      "Y": 53
+    },
     "70,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -37581,13 +38001,13 @@
       "Y": -5
     },
     "70,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 37,
       "Y": -4
     },
     "70,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 37,
       "Y": -3
@@ -37922,6 +38342,12 @@
       "X": 37,
       "Y": 52
     },
+    "70,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 37,
+      "Y": 53
+    },
     "71,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -38115,13 +38541,13 @@
       "Y": -5
     },
     "71,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 38,
       "Y": -4
     },
     "71,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 38,
       "Y": -3
@@ -38456,6 +38882,12 @@
       "X": 38,
       "Y": 52
     },
+    "71,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 38,
+      "Y": 53
+    },
     "72,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -38649,13 +39081,13 @@
       "Y": -5
     },
     "72,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 39,
       "Y": -4
     },
     "72,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 39,
       "Y": -3
@@ -38990,6 +39422,12 @@
       "X": 39,
       "Y": 52
     },
+    "72,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 39,
+      "Y": 53
+    },
     "73,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -39183,13 +39621,13 @@
       "Y": -5
     },
     "73,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 40,
       "Y": -4
     },
     "73,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 40,
       "Y": -3
@@ -39524,6 +39962,12 @@
       "X": 40,
       "Y": 52
     },
+    "73,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 40,
+      "Y": 53
+    },
     "74,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -39717,13 +40161,13 @@
       "Y": -5
     },
     "74,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 41,
       "Y": -4
     },
     "74,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 41,
       "Y": -3
@@ -40058,6 +40502,12 @@
       "X": 41,
       "Y": 52
     },
+    "74,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 41,
+      "Y": 53
+    },
     "75,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -40251,13 +40701,13 @@
       "Y": -5
     },
     "75,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 42,
       "Y": -4
     },
     "75,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 42,
       "Y": -3
@@ -40592,6 +41042,12 @@
       "X": 42,
       "Y": 52
     },
+    "75,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 42,
+      "Y": 53
+    },
     "76,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -40785,13 +41241,13 @@
       "Y": -5
     },
     "76,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 43,
       "Y": -4
     },
     "76,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 43,
       "Y": -3
@@ -41126,6 +41582,12 @@
       "X": 43,
       "Y": 52
     },
+    "76,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 43,
+      "Y": 53
+    },
     "77,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -41319,13 +41781,13 @@
       "Y": -5
     },
     "77,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 44,
       "Y": -4
     },
     "77,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 44,
       "Y": -3
@@ -41660,6 +42122,12 @@
       "X": 44,
       "Y": 52
     },
+    "77,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 44,
+      "Y": 53
+    },
     "78,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -41853,13 +42321,13 @@
       "Y": -5
     },
     "78,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 45,
       "Y": -4
     },
     "78,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 45,
       "Y": -3
@@ -42194,6 +42662,12 @@
       "X": 45,
       "Y": 52
     },
+    "78,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 45,
+      "Y": 53
+    },
     "79,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -42387,13 +42861,13 @@
       "Y": -5
     },
     "79,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 46,
       "Y": -4
     },
     "79,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 46,
       "Y": -3
@@ -42728,6 +43202,12 @@
       "X": 46,
       "Y": 52
     },
+    "79,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 46,
+      "Y": 53
+    },
     "80,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -42921,13 +43401,13 @@
       "Y": -5
     },
     "80,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 47,
       "Y": -4
     },
     "80,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 47,
       "Y": -3
@@ -43262,6 +43742,12 @@
       "X": 47,
       "Y": 52
     },
+    "80,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 47,
+      "Y": 53
+    },
     "81,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -43455,13 +43941,13 @@
       "Y": -5
     },
     "81,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 48,
       "Y": -4
     },
     "81,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 48,
       "Y": -3
@@ -43796,6 +44282,12 @@
       "X": 48,
       "Y": 52
     },
+    "81,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 48,
+      "Y": 53
+    },
     "82,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -43989,13 +44481,13 @@
       "Y": -5
     },
     "82,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 49,
       "Y": -4
     },
     "82,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 49,
       "Y": -3
@@ -44330,6 +44822,12 @@
       "X": 49,
       "Y": 52
     },
+    "82,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 49,
+      "Y": 53
+    },
     "83,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -44523,13 +45021,13 @@
       "Y": -5
     },
     "83,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 50,
       "Y": -4
     },
     "83,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 50,
       "Y": -3
@@ -44864,6 +45362,12 @@
       "X": 50,
       "Y": 52
     },
+    "83,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 50,
+      "Y": 53
+    },
     "84,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -45057,13 +45561,13 @@
       "Y": -5
     },
     "84,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 51,
       "Y": -4
     },
     "84,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 51,
       "Y": -3
@@ -45398,6 +45902,12 @@
       "X": 51,
       "Y": 52
     },
+    "84,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 51,
+      "Y": 53
+    },
     "85,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -45591,13 +46101,13 @@
       "Y": -5
     },
     "85,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 52,
       "Y": -4
     },
     "85,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 52,
       "Y": -3
@@ -45932,6 +46442,12 @@
       "X": 52,
       "Y": 52
     },
+    "85,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 52,
+      "Y": 53
+    },
     "86,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -46125,13 +46641,13 @@
       "Y": -5
     },
     "86,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 53,
       "Y": -4
     },
     "86,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 53,
       "Y": -3
@@ -46466,6 +46982,12 @@
       "X": 53,
       "Y": 52
     },
+    "86,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 53,
+      "Y": 53
+    },
     "87,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -46659,13 +47181,13 @@
       "Y": -5
     },
     "87,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 54,
       "Y": -4
     },
     "87,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 54,
       "Y": -3
@@ -47000,6 +47522,12 @@
       "X": 54,
       "Y": 52
     },
+    "87,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 54,
+      "Y": 53
+    },
     "88,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -47193,13 +47721,13 @@
       "Y": -5
     },
     "88,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 55,
       "Y": -4
     },
     "88,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 55,
       "Y": -3
@@ -47534,6 +48062,12 @@
       "X": 55,
       "Y": 52
     },
+    "88,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 55,
+      "Y": 53
+    },
     "89,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -47727,13 +48261,13 @@
       "Y": -5
     },
     "89,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 56,
       "Y": -4
     },
     "89,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 56,
       "Y": -3
@@ -48068,6 +48602,12 @@
       "X": 56,
       "Y": 52
     },
+    "89,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 56,
+      "Y": 53
+    },
     "90,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -48261,13 +48801,13 @@
       "Y": -5
     },
     "90,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 57,
       "Y": -4
     },
     "90,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 57,
       "Y": -3
@@ -48602,6 +49142,12 @@
       "X": 57,
       "Y": 52
     },
+    "90,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 57,
+      "Y": 53
+    },
     "91,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -48795,13 +49341,13 @@
       "Y": -5
     },
     "91,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 58,
       "Y": -4
     },
     "91,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 58,
       "Y": -3
@@ -49136,6 +49682,12 @@
       "X": 58,
       "Y": 52
     },
+    "91,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 58,
+      "Y": 53
+    },
     "92,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -49329,13 +49881,13 @@
       "Y": -5
     },
     "92,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 59,
       "Y": -4
     },
     "92,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 59,
       "Y": -3
@@ -49669,6 +50221,12 @@
       "IsMoveAbleObj": false,
       "X": 59,
       "Y": 52
+    },
+    "92,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 59,
+      "Y": 53
     },
     "93,0": {
       "IsWall": false,
@@ -50145,7 +50703,7 @@
       "Y": 42
     },
     "93,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 60,
       "Y": 43
@@ -50203,6 +50761,12 @@
       "IsMoveAbleObj": false,
       "X": 60,
       "Y": 52
+    },
+    "93,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 60,
+      "Y": 53
     },
     "94,0": {
       "IsWall": false,
@@ -50679,7 +51243,7 @@
       "Y": 42
     },
     "94,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 61,
       "Y": 43
@@ -50737,6 +51301,12 @@
       "IsMoveAbleObj": false,
       "X": 61,
       "Y": 52
+    },
+    "94,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 61,
+      "Y": 53
     },
     "95,0": {
       "IsWall": false,
@@ -51213,7 +51783,7 @@
       "Y": 42
     },
     "95,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 62,
       "Y": 43
@@ -51271,6 +51841,12 @@
       "IsMoveAbleObj": false,
       "X": 62,
       "Y": 52
+    },
+    "95,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 62,
+      "Y": 53
     },
     "96,0": {
       "IsWall": false,
@@ -51747,7 +52323,7 @@
       "Y": 42
     },
     "96,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 63,
       "Y": 43
@@ -51805,6 +52381,12 @@
       "IsMoveAbleObj": false,
       "X": 63,
       "Y": 52
+    },
+    "96,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 63,
+      "Y": 53
     },
     "97,0": {
       "IsWall": false,
@@ -52281,7 +52863,7 @@
       "Y": 42
     },
     "97,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 64,
       "Y": 43
@@ -52339,6 +52921,12 @@
       "IsMoveAbleObj": false,
       "X": 64,
       "Y": 52
+    },
+    "97,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 64,
+      "Y": 53
     },
     "98,0": {
       "IsWall": false,
@@ -52815,7 +53403,7 @@
       "Y": 42
     },
     "98,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 65,
       "Y": 43
@@ -52873,6 +53461,12 @@
       "IsMoveAbleObj": false,
       "X": 65,
       "Y": 52
+    },
+    "98,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 65,
+      "Y": 53
     },
     "99,0": {
       "IsWall": false,
@@ -53349,7 +53943,7 @@
       "Y": 42
     },
     "99,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 66,
       "Y": 43
@@ -53407,6 +54001,12 @@
       "IsMoveAbleObj": false,
       "X": 66,
       "Y": 52
+    },
+    "99,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 66,
+      "Y": 53
     },
     "100,0": {
       "IsWall": false,
@@ -53883,64 +54483,70 @@
       "Y": 42
     },
     "100,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 43
     },
     "100,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 44
     },
     "100,81": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 45
     },
     "100,82": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 46
     },
     "100,83": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 47
     },
     "100,84": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 48
     },
     "100,85": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 49
     },
     "100,86": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 50
     },
     "100,87": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 51
     },
     "100,88": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 67,
       "Y": 52
+    },
+    "100,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 67,
+      "Y": 53
     },
     "101,0": {
       "IsWall": false,
@@ -54417,64 +55023,70 @@
       "Y": 42
     },
     "101,79": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 43
     },
     "101,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 44
     },
     "101,81": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 45
     },
     "101,82": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 46
     },
     "101,83": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 47
     },
     "101,84": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 48
     },
     "101,85": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 49
     },
     "101,86": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 50
     },
     "101,87": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 51
     },
     "101,88": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 68,
       "Y": 52
+    },
+    "101,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 68,
+      "Y": 53
     },
     "102,0": {
       "IsWall": false,
@@ -55010,6 +55622,12 @@
       "X": 69,
       "Y": 52
     },
+    "102,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 69,
+      "Y": 53
+    },
     "103,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -55543,6 +56161,12 @@
       "IsMoveAbleObj": false,
       "X": 70,
       "Y": 52
+    },
+    "103,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 70,
+      "Y": 53
     },
     "104,0": {
       "IsWall": false,
@@ -56078,6 +56702,12 @@
       "X": 71,
       "Y": 52
     },
+    "104,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 71,
+      "Y": 53
+    },
     "105,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -56611,6 +57241,12 @@
       "IsMoveAbleObj": false,
       "X": 72,
       "Y": 52
+    },
+    "105,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 72,
+      "Y": 53
     },
     "106,0": {
       "IsWall": false,
@@ -57146,6 +57782,12 @@
       "X": 73,
       "Y": 52
     },
+    "106,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 73,
+      "Y": 53
+    },
     "107,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -57679,6 +58321,12 @@
       "IsMoveAbleObj": false,
       "X": 74,
       "Y": 52
+    },
+    "107,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 74,
+      "Y": 53
     },
     "108,0": {
       "IsWall": false,
@@ -58214,6 +58862,12 @@
       "X": 75,
       "Y": 52
     },
+    "108,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 75,
+      "Y": 53
+    },
     "109,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -58747,6 +59401,12 @@
       "IsMoveAbleObj": false,
       "X": 76,
       "Y": 52
+    },
+    "109,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 76,
+      "Y": 53
     },
     "110,0": {
       "IsWall": false,
@@ -59282,6 +59942,12 @@
       "X": 77,
       "Y": 52
     },
+    "110,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 77,
+      "Y": 53
+    },
     "111,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -59815,6 +60481,12 @@
       "IsMoveAbleObj": false,
       "X": 78,
       "Y": 52
+    },
+    "111,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 78,
+      "Y": 53
     },
     "112,0": {
       "IsWall": false,
@@ -60350,6 +61022,12 @@
       "X": 79,
       "Y": 52
     },
+    "112,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 79,
+      "Y": 53
+    },
     "113,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -60883,6 +61561,12 @@
       "IsMoveAbleObj": false,
       "X": 80,
       "Y": 52
+    },
+    "113,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 80,
+      "Y": 53
     },
     "114,0": {
       "IsWall": false,
@@ -61418,6 +62102,12 @@
       "X": 81,
       "Y": 52
     },
+    "114,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 81,
+      "Y": 53
+    },
     "115,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -61951,6 +62641,12 @@
       "IsMoveAbleObj": false,
       "X": 82,
       "Y": 52
+    },
+    "115,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 82,
+      "Y": 53
     },
     "116,0": {
       "IsWall": false,
@@ -62486,6 +63182,12 @@
       "X": 83,
       "Y": 52
     },
+    "116,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 83,
+      "Y": 53
+    },
     "117,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -63019,6 +63721,12 @@
       "IsMoveAbleObj": false,
       "X": 84,
       "Y": 52
+    },
+    "117,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 84,
+      "Y": 53
     },
     "118,0": {
       "IsWall": false,
@@ -63554,6 +64262,12 @@
       "X": 85,
       "Y": 52
     },
+    "118,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 85,
+      "Y": 53
+    },
     "119,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -64087,6 +64801,12 @@
       "IsMoveAbleObj": false,
       "X": 86,
       "Y": 52
+    },
+    "119,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 86,
+      "Y": 53
     },
     "120,0": {
       "IsWall": false,
@@ -64622,6 +65342,12 @@
       "X": 87,
       "Y": 52
     },
+    "120,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 87,
+      "Y": 53
+    },
     "121,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -65155,6 +65881,12 @@
       "IsMoveAbleObj": false,
       "X": 88,
       "Y": 52
+    },
+    "121,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 88,
+      "Y": 53
     },
     "122,0": {
       "IsWall": false,
@@ -65690,6 +66422,12 @@
       "X": 89,
       "Y": 52
     },
+    "122,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 89,
+      "Y": 53
+    },
     "123,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -66223,6 +66961,12 @@
       "IsMoveAbleObj": false,
       "X": 90,
       "Y": 52
+    },
+    "123,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 90,
+      "Y": 53
     },
     "124,0": {
       "IsWall": false,
@@ -66758,6 +67502,12 @@
       "X": 91,
       "Y": 52
     },
+    "124,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 91,
+      "Y": 53
+    },
     "125,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -67291,6 +68041,12 @@
       "IsMoveAbleObj": false,
       "X": 92,
       "Y": 52
+    },
+    "125,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 92,
+      "Y": 53
     },
     "126,0": {
       "IsWall": false,
@@ -67826,6 +68582,12 @@
       "X": 93,
       "Y": 52
     },
+    "126,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 93,
+      "Y": 53
+    },
     "127,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -68359,6 +69121,12 @@
       "IsMoveAbleObj": false,
       "X": 94,
       "Y": 52
+    },
+    "127,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 94,
+      "Y": 53
     },
     "128,0": {
       "IsWall": false,
@@ -68894,6 +69662,12 @@
       "X": 95,
       "Y": 52
     },
+    "128,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 95,
+      "Y": 53
+    },
     "129,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -69427,6 +70201,12 @@
       "IsMoveAbleObj": false,
       "X": 96,
       "Y": 52
+    },
+    "129,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 96,
+      "Y": 53
     },
     "130,0": {
       "IsWall": false,
@@ -69962,6 +70742,12 @@
       "X": 97,
       "Y": 52
     },
+    "130,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 97,
+      "Y": 53
+    },
     "131,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -70495,6 +71281,12 @@
       "IsMoveAbleObj": false,
       "X": 98,
       "Y": 52
+    },
+    "131,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 98,
+      "Y": 53
     },
     "132,0": {
       "IsWall": false,
@@ -71030,6 +71822,12 @@
       "X": 99,
       "Y": 52
     },
+    "132,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 99,
+      "Y": 53
+    },
     "133,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -71563,6 +72361,12 @@
       "IsMoveAbleObj": false,
       "X": 100,
       "Y": 52
+    },
+    "133,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 100,
+      "Y": 53
     },
     "134,0": {
       "IsWall": false,
@@ -72098,6 +72902,12 @@
       "X": 101,
       "Y": 52
     },
+    "134,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 101,
+      "Y": 53
+    },
     "135,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -72632,6 +73442,12 @@
       "X": 102,
       "Y": 52
     },
+    "135,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 102,
+      "Y": 53
+    },
     "136,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -73113,58 +73929,64 @@
       "Y": 43
     },
     "136,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 44
     },
     "136,81": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 45
     },
     "136,82": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 46
     },
     "136,83": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 47
     },
     "136,84": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 48
     },
     "136,85": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 49
     },
     "136,86": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 50
     },
     "136,87": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 51
     },
     "136,88": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 103,
       "Y": 52
+    },
+    "136,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 103,
+      "Y": 53
     },
     "137,0": {
       "IsWall": false,
@@ -73647,58 +74469,64 @@
       "Y": 43
     },
     "137,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 44
     },
     "137,81": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 45
     },
     "137,82": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 46
     },
     "137,83": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 47
     },
     "137,84": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 48
     },
     "137,85": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 49
     },
     "137,86": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 50
     },
     "137,87": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 51
     },
     "137,88": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 104,
       "Y": 52
+    },
+    "137,89": {
+      "IsWall": true,
+      "IsMoveAbleObj": false,
+      "X": 104,
+      "Y": 53
     },
     "138,0": {
       "IsWall": false,
@@ -74181,7 +75009,7 @@
       "Y": 43
     },
     "138,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 105,
       "Y": 44
@@ -74233,6 +75061,12 @@
       "IsMoveAbleObj": false,
       "X": 105,
       "Y": 52
+    },
+    "138,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 105,
+      "Y": 53
     },
     "139,0": {
       "IsWall": false,
@@ -74715,7 +75549,7 @@
       "Y": 43
     },
     "139,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 106,
       "Y": 44
@@ -74767,6 +75601,12 @@
       "IsMoveAbleObj": false,
       "X": 106,
       "Y": 52
+    },
+    "139,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 106,
+      "Y": 53
     },
     "140,0": {
       "IsWall": false,
@@ -75249,7 +76089,7 @@
       "Y": 43
     },
     "140,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 107,
       "Y": 44
@@ -75301,6 +76141,12 @@
       "IsMoveAbleObj": false,
       "X": 107,
       "Y": 52
+    },
+    "140,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 107,
+      "Y": 53
     },
     "141,0": {
       "IsWall": false,
@@ -75783,7 +76629,7 @@
       "Y": 43
     },
     "141,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 108,
       "Y": 44
@@ -75835,6 +76681,12 @@
       "IsMoveAbleObj": false,
       "X": 108,
       "Y": 52
+    },
+    "141,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 108,
+      "Y": 53
     },
     "142,0": {
       "IsWall": false,
@@ -76317,7 +77169,7 @@
       "Y": 43
     },
     "142,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 109,
       "Y": 44
@@ -76369,6 +77221,12 @@
       "IsMoveAbleObj": false,
       "X": 109,
       "Y": 52
+    },
+    "142,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 109,
+      "Y": 53
     },
     "143,0": {
       "IsWall": false,
@@ -76851,7 +77709,7 @@
       "Y": 43
     },
     "143,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 110,
       "Y": 44
@@ -76903,6 +77761,12 @@
       "IsMoveAbleObj": false,
       "X": 110,
       "Y": 52
+    },
+    "143,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 110,
+      "Y": 53
     },
     "144,0": {
       "IsWall": false,
@@ -77385,7 +78249,7 @@
       "Y": 43
     },
     "144,80": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 111,
       "Y": 44
@@ -77437,6 +78301,12 @@
       "IsMoveAbleObj": false,
       "X": 111,
       "Y": 52
+    },
+    "144,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 111,
+      "Y": 53
     },
     "145,0": {
       "IsWall": false,
@@ -77631,13 +78501,13 @@
       "Y": -5
     },
     "145,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 112,
       "Y": -4
     },
     "145,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 112,
       "Y": -3
@@ -77972,6 +78842,12 @@
       "X": 112,
       "Y": 52
     },
+    "145,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 112,
+      "Y": 53
+    },
     "146,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -78165,13 +79041,13 @@
       "Y": -5
     },
     "146,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 113,
       "Y": -4
     },
     "146,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 113,
       "Y": -3
@@ -78506,6 +79382,12 @@
       "X": 113,
       "Y": 52
     },
+    "146,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 113,
+      "Y": 53
+    },
     "147,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -78699,13 +79581,13 @@
       "Y": -5
     },
     "147,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 114,
       "Y": -4
     },
     "147,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 114,
       "Y": -3
@@ -79040,6 +79922,12 @@
       "X": 114,
       "Y": 52
     },
+    "147,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 114,
+      "Y": 53
+    },
     "148,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -79233,13 +80121,13 @@
       "Y": -5
     },
     "148,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 115,
       "Y": -4
     },
     "148,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 115,
       "Y": -3
@@ -79574,6 +80462,12 @@
       "X": 115,
       "Y": 52
     },
+    "148,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 115,
+      "Y": 53
+    },
     "149,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -79767,13 +80661,13 @@
       "Y": -5
     },
     "149,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 116,
       "Y": -4
     },
     "149,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 116,
       "Y": -3
@@ -80108,6 +81002,12 @@
       "X": 116,
       "Y": 52
     },
+    "149,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 116,
+      "Y": 53
+    },
     "150,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -80301,13 +81201,13 @@
       "Y": -5
     },
     "150,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 117,
       "Y": -4
     },
     "150,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 117,
       "Y": -3
@@ -80642,6 +81542,12 @@
       "X": 117,
       "Y": 52
     },
+    "150,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 117,
+      "Y": 53
+    },
     "151,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -80835,13 +81741,13 @@
       "Y": -5
     },
     "151,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 118,
       "Y": -4
     },
     "151,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 118,
       "Y": -3
@@ -81176,6 +82082,12 @@
       "X": 118,
       "Y": 52
     },
+    "151,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 118,
+      "Y": 53
+    },
     "152,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -81369,13 +82281,13 @@
       "Y": -5
     },
     "152,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 119,
       "Y": -4
     },
     "152,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 119,
       "Y": -3
@@ -81710,6 +82622,12 @@
       "X": 119,
       "Y": 52
     },
+    "152,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 119,
+      "Y": 53
+    },
     "153,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -81903,13 +82821,13 @@
       "Y": -5
     },
     "153,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 120,
       "Y": -4
     },
     "153,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 120,
       "Y": -3
@@ -82244,6 +83162,12 @@
       "X": 120,
       "Y": 52
     },
+    "153,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 120,
+      "Y": 53
+    },
     "154,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -82437,13 +83361,13 @@
       "Y": -5
     },
     "154,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 121,
       "Y": -4
     },
     "154,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 121,
       "Y": -3
@@ -82778,6 +83702,12 @@
       "X": 121,
       "Y": 52
     },
+    "154,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 121,
+      "Y": 53
+    },
     "155,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -82971,13 +83901,13 @@
       "Y": -5
     },
     "155,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 122,
       "Y": -4
     },
     "155,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 122,
       "Y": -3
@@ -83312,6 +84242,12 @@
       "X": 122,
       "Y": 52
     },
+    "155,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 122,
+      "Y": 53
+    },
     "156,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -83505,13 +84441,13 @@
       "Y": -5
     },
     "156,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 123,
       "Y": -4
     },
     "156,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 123,
       "Y": -3
@@ -83846,6 +84782,12 @@
       "X": 123,
       "Y": 52
     },
+    "156,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 123,
+      "Y": 53
+    },
     "157,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -84039,13 +84981,13 @@
       "Y": -5
     },
     "157,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 124,
       "Y": -4
     },
     "157,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 124,
       "Y": -3
@@ -84380,6 +85322,12 @@
       "X": 124,
       "Y": 52
     },
+    "157,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 124,
+      "Y": 53
+    },
     "158,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -84573,13 +85521,13 @@
       "Y": -5
     },
     "158,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 125,
       "Y": -4
     },
     "158,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 125,
       "Y": -3
@@ -84914,6 +85862,12 @@
       "X": 125,
       "Y": 52
     },
+    "158,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 125,
+      "Y": 53
+    },
     "159,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -85107,13 +86061,13 @@
       "Y": -5
     },
     "159,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 126,
       "Y": -4
     },
     "159,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 126,
       "Y": -3
@@ -85448,6 +86402,12 @@
       "X": 126,
       "Y": 52
     },
+    "159,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 126,
+      "Y": 53
+    },
     "160,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -85641,13 +86601,13 @@
       "Y": -5
     },
     "160,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 127,
       "Y": -4
     },
     "160,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 127,
       "Y": -3
@@ -85982,6 +86942,12 @@
       "X": 127,
       "Y": 52
     },
+    "160,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 127,
+      "Y": 53
+    },
     "161,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -86175,13 +87141,13 @@
       "Y": -5
     },
     "161,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 128,
       "Y": -4
     },
     "161,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 128,
       "Y": -3
@@ -86516,6 +87482,12 @@
       "X": 128,
       "Y": 52
     },
+    "161,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 128,
+      "Y": 53
+    },
     "162,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -86709,13 +87681,13 @@
       "Y": -5
     },
     "162,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 129,
       "Y": -4
     },
     "162,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 129,
       "Y": -3
@@ -87050,6 +88022,12 @@
       "X": 129,
       "Y": 52
     },
+    "162,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 129,
+      "Y": 53
+    },
     "163,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -87243,13 +88221,13 @@
       "Y": -5
     },
     "163,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 130,
       "Y": -4
     },
     "163,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 130,
       "Y": -3
@@ -87584,6 +88562,12 @@
       "X": 130,
       "Y": 52
     },
+    "163,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 130,
+      "Y": 53
+    },
     "164,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -87777,13 +88761,13 @@
       "Y": -5
     },
     "164,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 131,
       "Y": -4
     },
     "164,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 131,
       "Y": -3
@@ -88118,6 +89102,12 @@
       "X": 131,
       "Y": 52
     },
+    "164,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 131,
+      "Y": 53
+    },
     "165,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -88311,13 +89301,13 @@
       "Y": -5
     },
     "165,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 132,
       "Y": -4
     },
     "165,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 132,
       "Y": -3
@@ -88652,6 +89642,12 @@
       "X": 132,
       "Y": 52
     },
+    "165,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 132,
+      "Y": 53
+    },
     "166,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -88845,13 +89841,13 @@
       "Y": -5
     },
     "166,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 133,
       "Y": -4
     },
     "166,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 133,
       "Y": -3
@@ -89186,6 +90182,12 @@
       "X": 133,
       "Y": 52
     },
+    "166,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 133,
+      "Y": 53
+    },
     "167,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -89379,13 +90381,13 @@
       "Y": -5
     },
     "167,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 134,
       "Y": -4
     },
     "167,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 134,
       "Y": -3
@@ -89720,6 +90722,12 @@
       "X": 134,
       "Y": 52
     },
+    "167,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 134,
+      "Y": 53
+    },
     "168,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -89913,13 +90921,13 @@
       "Y": -5
     },
     "168,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 135,
       "Y": -4
     },
     "168,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 135,
       "Y": -3
@@ -90254,6 +91262,12 @@
       "X": 135,
       "Y": 52
     },
+    "168,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 135,
+      "Y": 53
+    },
     "169,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -90447,13 +91461,13 @@
       "Y": -5
     },
     "169,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 136,
       "Y": -4
     },
     "169,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 136,
       "Y": -3
@@ -90788,6 +91802,12 @@
       "X": 136,
       "Y": 52
     },
+    "169,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 136,
+      "Y": 53
+    },
     "170,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -90981,13 +92001,13 @@
       "Y": -5
     },
     "170,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 137,
       "Y": -4
     },
     "170,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 137,
       "Y": -3
@@ -91322,6 +92342,12 @@
       "X": 137,
       "Y": 52
     },
+    "170,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 137,
+      "Y": 53
+    },
     "171,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -91515,13 +92541,13 @@
       "Y": -5
     },
     "171,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 138,
       "Y": -4
     },
     "171,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 138,
       "Y": -3
@@ -91856,6 +92882,12 @@
       "X": 138,
       "Y": 52
     },
+    "171,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 138,
+      "Y": 53
+    },
     "172,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -92049,13 +93081,13 @@
       "Y": -5
     },
     "172,32": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 139,
       "Y": -4
     },
     "172,33": {
-      "IsWall": false,
+      "IsWall": true,
       "IsMoveAbleObj": false,
       "X": 139,
       "Y": -3
@@ -92389,6 +93421,12 @@
       "IsMoveAbleObj": false,
       "X": 139,
       "Y": 52
+    },
+    "172,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 139,
+      "Y": 53
     },
     "173,0": {
       "IsWall": false,
@@ -92924,6 +93962,12 @@
       "X": 140,
       "Y": 52
     },
+    "173,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 140,
+      "Y": 53
+    },
     "174,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -93457,6 +94501,12 @@
       "IsMoveAbleObj": false,
       "X": 141,
       "Y": 52
+    },
+    "174,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 141,
+      "Y": 53
     },
     "175,0": {
       "IsWall": false,
@@ -93992,6 +95042,12 @@
       "X": 142,
       "Y": 52
     },
+    "175,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 142,
+      "Y": 53
+    },
     "176,0": {
       "IsWall": false,
       "IsMoveAbleObj": false,
@@ -94525,6 +95581,12 @@
       "IsMoveAbleObj": false,
       "X": 143,
       "Y": 52
+    },
+    "176,89": {
+      "IsWall": false,
+      "IsMoveAbleObj": false,
+      "X": 143,
+      "Y": 53
     }
   }
 }
