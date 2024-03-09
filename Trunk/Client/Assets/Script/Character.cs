@@ -13,6 +13,8 @@ public class Character : MonoBehaviour
         None = 0,
         User = 1,
         Monster = 2,
+        // 멀티 플레이어 캐릭터 추가
+        another_User = 3,
         Max,
     }
 
@@ -93,6 +95,18 @@ public class Character : MonoBehaviour
             animator.SetBool("isMove", false);
     }
 
+    public void anotherMoveUpdate()
+    {
+        //죽었다면 움직임 불가.
+        if (state == State.Dead)
+            return;
+
+        state = State.Idle;
+
+        if (state == State.Idle)
+            animator.SetBool("isMove", false);
+    }
+
     public void Init(short type, GameObject gameObject, Character parent, float speed)
     {
         characterType = (CharacterType)type;
@@ -124,6 +138,13 @@ public class Character : MonoBehaviour
                     target = GameObject.Find("user").GetComponent<Character>();
                     sSprite += "Undead Survivor\\Sprites\\Enemy 0";
                     sAnimator += "Undead Survivor\\Animations\\Enemy\\AcEnemy 0";
+                }
+                break;
+            case CharacterType.another_User:
+                {
+                    destination = Vector2Int.zero;
+                    sSprite += "Undead Survivor\\Sprites\\Farmer 1";
+                    sAnimator += "Undead Survivor\\Animations\\Player\\anotherplayerAnimatorController";
                 }
                 break;
             default:

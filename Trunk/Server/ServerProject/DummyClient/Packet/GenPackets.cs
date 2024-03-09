@@ -6,8 +6,8 @@ using System.Text;
 public enum PacketID
 {
     S_BroadcastEnterGame = 1,
-	C_LaaveGame = 2,
-	S_BroadcastLaaveGame = 3,
+	C_LeaveGame = 2,
+	S_BroadcastLeaveGame = 3,
 	S_PlayerList = 4,
 	C_Move = 5,
 	S_BroadcastMove = 6,
@@ -24,9 +24,10 @@ public interface IPacket
 public class S_BroadcastEnterGame :IPacket
 {
     public int playerId;
+	public float hp;
+	public float stamina;
 	public float posX;
 	public float posY;
-	public float posZ;
 
     public ushort Protocol { get { return (ushort)PacketID.S_BroadcastEnterGame; } }
 
@@ -40,11 +41,13 @@ public class S_BroadcastEnterGame :IPacket
 
         this.playerId = BitConverter.ToInt32(s.Slice(count, s.Length - count));
 		count += sizeof(int);
+		this.hp = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+		count += sizeof(float);
+		this.stamina = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+		count += sizeof(float);
 		this.posX = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 		count += sizeof(float);
 		this.posY = BitConverter.ToSingle(s.Slice(count, s.Length - count));
-		count += sizeof(float);
-		this.posZ = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 		count += sizeof(float);
     }
 
@@ -62,11 +65,13 @@ public class S_BroadcastEnterGame :IPacket
         count += sizeof(ushort);
         success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.playerId);
 		count += sizeof(int);
+		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.hp);
+		count += sizeof(float);
+		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.stamina);
+		count += sizeof(float);
 		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posX);
 		count += sizeof(float);
 		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posY);
-		count += sizeof(float);
-		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posZ);
 		count += sizeof(float);
         success &= BitConverter.TryWriteBytes(s, count);
 
@@ -75,11 +80,11 @@ public class S_BroadcastEnterGame :IPacket
 
         return SendBufferHelper.Close(count);
     }
-}public class C_LaaveGame :IPacket
+}public class C_LeaveGame :IPacket
 {
     
 
-    public ushort Protocol { get { return (ushort)PacketID.C_LaaveGame; } }
+    public ushort Protocol { get { return (ushort)PacketID.C_LeaveGame; } }
 
     public void Read(ArraySegment<byte> segment)
     {
@@ -102,7 +107,7 @@ public class S_BroadcastEnterGame :IPacket
         Span<byte> s = new Span<byte> (segment.Array, segment.Offset, segment.Count); 
 
         count += sizeof(ushort);
-        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.C_LaaveGame);
+        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.C_LeaveGame);
         count += sizeof(ushort);
         
         success &= BitConverter.TryWriteBytes(s, count);
@@ -112,11 +117,11 @@ public class S_BroadcastEnterGame :IPacket
 
         return SendBufferHelper.Close(count);
     }
-}public class S_BroadcastLaaveGame :IPacket
+}public class S_BroadcastLeaveGame :IPacket
 {
     public int playerId;
 
-    public ushort Protocol { get { return (ushort)PacketID.S_BroadcastLaaveGame; } }
+    public ushort Protocol { get { return (ushort)PacketID.S_BroadcastLeaveGame; } }
 
     public void Read(ArraySegment<byte> segment)
     {
@@ -140,7 +145,7 @@ public class S_BroadcastEnterGame :IPacket
         Span<byte> s = new Span<byte> (segment.Array, segment.Offset, segment.Count); 
 
         count += sizeof(ushort);
-        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.S_BroadcastLaaveGame);
+        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.S_BroadcastLeaveGame);
         count += sizeof(ushort);
         success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.playerId);
 		count += sizeof(int);
@@ -157,9 +162,10 @@ public class S_BroadcastEnterGame :IPacket
 	{
 	    public bool isSelf;
 		public int playerId;
+		public float hp;
+		public float stamina;
 		public float posX;
 		public float posY;
-		public float posZ;
 	
 	    public void Read(ReadOnlySpan<byte> s, ref ushort count)
 	    {
@@ -167,11 +173,13 @@ public class S_BroadcastEnterGame :IPacket
 			count += sizeof(bool);
 			this.playerId = BitConverter.ToInt32(s.Slice(count, s.Length - count));
 			count += sizeof(int);
+			this.hp = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+			count += sizeof(float);
+			this.stamina = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+			count += sizeof(float);
 			this.posX = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 			count += sizeof(float);
 			this.posY = BitConverter.ToSingle(s.Slice(count, s.Length - count));
-			count += sizeof(float);
-			this.posZ = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 			count += sizeof(float);
 	    }
 	
@@ -182,11 +190,13 @@ public class S_BroadcastEnterGame :IPacket
 			count += sizeof(bool);
 			success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.playerId);
 			count += sizeof(int);
+			success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.hp);
+			count += sizeof(float);
+			success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.stamina);
+			count += sizeof(float);
 			success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posX);
 			count += sizeof(float);
 			success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posY);
-			count += sizeof(float);
-			success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posZ);
 			count += sizeof(float);
 	        return true;
 	    }
@@ -240,9 +250,9 @@ public class S_BroadcastEnterGame :IPacket
     }
 }public class C_Move :IPacket
 {
-    public float posX;
+    public float stamina;
+	public float posX;
 	public float posY;
-	public float posZ;
 
     public ushort Protocol { get { return (ushort)PacketID.C_Move; } }
 
@@ -254,11 +264,11 @@ public class S_BroadcastEnterGame :IPacket
         count += sizeof(ushort);
         count += sizeof(ushort);
 
-        this.posX = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+        this.stamina = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+		count += sizeof(float);
+		this.posX = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 		count += sizeof(float);
 		this.posY = BitConverter.ToSingle(s.Slice(count, s.Length - count));
-		count += sizeof(float);
-		this.posZ = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 		count += sizeof(float);
     }
 
@@ -274,11 +284,11 @@ public class S_BroadcastEnterGame :IPacket
         count += sizeof(ushort);
         success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.C_Move);
         count += sizeof(ushort);
-        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posX);
+        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.stamina);
+		count += sizeof(float);
+		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posX);
 		count += sizeof(float);
 		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posY);
-		count += sizeof(float);
-		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posZ);
 		count += sizeof(float);
         success &= BitConverter.TryWriteBytes(s, count);
 
@@ -290,9 +300,9 @@ public class S_BroadcastEnterGame :IPacket
 }public class S_BroadcastMove :IPacket
 {
     public int playerId;
+	public float stamina;
 	public float posX;
 	public float posY;
-	public float posZ;
 
     public ushort Protocol { get { return (ushort)PacketID.S_BroadcastMove; } }
 
@@ -306,11 +316,11 @@ public class S_BroadcastEnterGame :IPacket
 
         this.playerId = BitConverter.ToInt32(s.Slice(count, s.Length - count));
 		count += sizeof(int);
+		this.stamina = BitConverter.ToSingle(s.Slice(count, s.Length - count));
+		count += sizeof(float);
 		this.posX = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 		count += sizeof(float);
 		this.posY = BitConverter.ToSingle(s.Slice(count, s.Length - count));
-		count += sizeof(float);
-		this.posZ = BitConverter.ToSingle(s.Slice(count, s.Length - count));
 		count += sizeof(float);
     }
 
@@ -328,11 +338,11 @@ public class S_BroadcastEnterGame :IPacket
         count += sizeof(ushort);
         success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.playerId);
 		count += sizeof(int);
+		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.stamina);
+		count += sizeof(float);
 		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posX);
 		count += sizeof(float);
 		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posY);
-		count += sizeof(float);
-		success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.posZ);
 		count += sizeof(float);
         success &= BitConverter.TryWriteBytes(s, count);
 

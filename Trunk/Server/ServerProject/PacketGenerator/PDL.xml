@@ -3,34 +3,36 @@
 	
 	<packet name ="S_BroadcastEnterGame">
 		<int name ="playerId"/>
+		<float name ="hp"/>
+		<float name ="stamina"/>
 		<float name ="posX"/>
 		<float name ="posY"/>
-		<float name ="posZ"/>
 	</packet>
-	<packet name ="C_LaaveGame">
+	<packet name ="C_LeaveGame">
 	</packet>
-	<packet name ="S_BroadcastLaaveGame">
+	<packet name ="S_BroadcastLeaveGame">
 		<int name ="playerId"/>
 	</packet>
 	<packet name ="S_PlayerList">
 		<list name ="player">
 			<bool name ="isSelf"/>
 			<int name ="playerId"/>
+			<float name ="hp"/>
+			<float name ="stamina"/>
 			<float name ="posX"/>
 			<float name ="posY"/>
-			<float name ="posZ"/>
 		</list>
 	</packet>
 	<packet name ="C_Move">
+		<float name ="stamina"/>
 		<float name ="posX"/>
 		<float name ="posY"/>
-		<float name ="posZ"/>
 	</packet>
 	<packet name ="S_BroadcastMove">
 		<int name ="playerId"/>
+		<float name ="stamina"/>
 		<float name ="posX"/>
 		<float name ="posY"/>
-		<float name ="posZ"/>
 	</packet>
 		
 </PDL>

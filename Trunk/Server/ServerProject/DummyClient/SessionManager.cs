@@ -23,10 +23,12 @@ namespace DummyClient
                 {
                     foreach (ServerSession session in _sessions)
                     {
+                        float x = _random.Next(-1, 1);
+                        float y = _random.Next(-1, 1);
+
                         C_Move movePacket = new C_Move();
-                        movePacket.posX = _random.Next(-50, 50);
-                        movePacket.posY = 0;
-                        movePacket.posZ = _random.Next(-50, 50);
+                        movePacket.posX = x;
+                        movePacket.posY = y;
 
                         session.Send(movePacket.Write());
                     }

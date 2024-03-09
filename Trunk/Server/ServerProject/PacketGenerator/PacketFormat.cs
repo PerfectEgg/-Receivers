@@ -82,6 +82,7 @@ Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>> _makeFunc =
 using ServerCore;
 using System.Net;
 using System.Text;
+using System.Collections.Generic;
 
 public enum PacketID
 {{

@@ -23,14 +23,14 @@ public class PlayerManager
             {
                 MyPlayer myPlayer = go.AddComponent<MyPlayer>();
                 myPlayer.PlayerId = p.playerId;
-                myPlayer.transform.position = new Vector3(p.posX, p.posY, p.posZ);
+                myPlayer.transform.position = new Vector2(p.posX, p.posY);
                 _myPlayer = myPlayer;
             }
             else
             {
                 Player player = go.AddComponent<Player>();
                 player.PlayerId = p.playerId;
-                player.transform.position = new Vector3(p.posX, p.posY, p.posZ);
+                player.transform.position = new Vector2(p.posX, p.posY);
                 _players.Add(p.playerId, player);
             }
         }
@@ -40,14 +40,14 @@ public class PlayerManager
     {
         if (_myPlayer.PlayerId == packet.playerId)
         {
-            _myPlayer.transform.position = new Vector3(packet.posX, packet.posY, packet.posZ);
+            _myPlayer.transform.position = new Vector2(packet.posX, packet.posY);
         }
         else
         {
             Player player = null;
             if (_players.TryGetValue(packet.playerId, out player))
             {
-                player.transform.position = new Vector3(packet.posX, packet.posY, packet.posZ);
+                player.transform.position = new Vector2(packet.posX, packet.posY);
             }
         }
     }
@@ -60,7 +60,7 @@ public class PlayerManager
         GameObject go = Object.Instantiate(obj) as GameObject;
 
         Player player = go.AddComponent<Player>();
-        player.transform.position = new Vector3(packet.posX, packet.posY, packet.posZ);
+        player.transform.position = new Vector2(packet.posX, packet.posY);
         _players.Add(packet.playerId, player);
     }
 

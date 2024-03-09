@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     private AStarPathfinderManager aStarPathfinderManager;
     Character user;
     Character enemy;
+    Character another_user;
+
     private GameObject map;
 
 
@@ -25,6 +27,9 @@ public class GameManager : MonoBehaviour
         enemy = ObjectManager.Instance.GetObject("enemy").AddComponent<Character>();
         enemy.Init(2, ObjectManager.Instance.GetObject("nomal"), enemy, 2.0f);
 
+        another_user = ObjectManager.Instance.GetObject("another_user").AddComponent<Character>();
+        another_user.Init(3, ObjectManager.Instance.GetObject("player"), another_user, 3.0f);
+
         Camera.main.GetComponent<CameraMove>().SetPlayerTransfrom(user.Transform);
 
         map = ObjectManager.Instance.GetObject("tileMap");
@@ -41,5 +46,6 @@ public class GameManager : MonoBehaviour
     {
         user.MoveUpdate();
         enemy.EnemyUpdate();
+        another_user.anotherMoveUpdate();
     }
 }

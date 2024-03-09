@@ -47,7 +47,6 @@ namespace Server
                     playerId = s.SessionID,
                     posX = s.PosX,
                     posY = s.PosY,
-                    posZ = s.PosZ,
                 });
             }
             session.Send(players.Write());
@@ -57,7 +56,6 @@ namespace Server
             enter.playerId = session.SessionID;
             enter.posX = 0;
             enter.posY = 0;
-            enter.posZ = 0;
             Broadcast(enter.Write());
         }
 
@@ -67,7 +65,7 @@ namespace Server
              _session.Remove(session);
 
             // 모두에게 전송
-            S_BroadcastLaaveGame leave = new S_BroadcastLaaveGame();
+            S_BroadcastLeaveGame leave = new S_BroadcastLeaveGame();
             leave.playerId = session.SessionID;
             Broadcast(leave.Write());
         }
@@ -77,14 +75,12 @@ namespace Server
             // 좌표를 바꿔주고
             session.PosX = packet.posX;
             session.PosY = packet.posY;
-            session.PosZ = packet.posZ;
 
             // 모두에게 알리기
             S_BroadcastMove move = new S_BroadcastMove();
             move.playerId = session.SessionID;
             move.posX = session.PosX;
             move.posY = session.PosY;
-            move.posZ = session.PosZ;
             Broadcast(move.Write());
         }
     }

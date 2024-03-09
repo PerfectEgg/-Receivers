@@ -14,9 +14,9 @@ internal class PacketHandler
         ServerSession serverSession = session as ServerSession;
     }
 
-    public static void S_BroadcastLaaveGameHandler(PacketSession session, IPacket packet)
+    public static void S_BroadcastLeaveGameHandler(PacketSession session, IPacket packet)
     {
-        S_BroadcastLaaveGame pkt = packet as S_BroadcastLaaveGame;
+        S_BroadcastLeaveGame pkt = packet as S_BroadcastLeaveGame;
         ServerSession serverSession = session as ServerSession;
     }
 
