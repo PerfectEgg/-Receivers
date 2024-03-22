@@ -53,6 +53,10 @@ public class Character : MonoBehaviour
 
     private Node nextNode;
 
+    private int playerId;
+
+    public int PlayerId {  get { return playerId; } }
+
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -107,7 +111,7 @@ public class Character : MonoBehaviour
             animator.SetBool("isMove", false);
     }
 
-    public void Init(short type, GameObject gameObject, Character parent, float speed)
+    public void Init(short type, GameObject gameObject, Character parent, float speed, Vector2 position, int playerId)
     {
         characterType = (CharacterType)type;
         state = characterType == CharacterType.User ? State.Idle : State.Spawn;
@@ -116,9 +120,10 @@ public class Character : MonoBehaviour
         character.transform.parent = parent.transform;
         animator = character.AddComponent<Animator>();
         spriteRenderer = character.AddComponent<SpriteRenderer>();
-        character.transform.position = Vector3.zero;
+        character.transform.position = position;
         Transform = character.transform;
 
+        this.playerId = playerId;
         this.speed = speed;
 
         string sSprite = "";
@@ -135,7 +140,8 @@ public class Character : MonoBehaviour
             case CharacterType.Monster:
                 {
                     destination = Vector2Int.zero;
-                    target = GameObject.Find("user").GetComponent<Character>();
+                    var user = GameObject.Find("user");
+                    target = user == null ? null : user.GetComponent<Character>();
                     sSprite += "Undead Survivor\\Sprites\\Enemy 0";
                     sAnimator += "Undead Survivor\\Animations\\Enemy\\AcEnemy 0";
                 }
@@ -166,6 +172,11 @@ public class Character : MonoBehaviour
 
         // 애니메이터
         animator.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>(sAnimator);
+    }
+
+    public void SetTarget(Character target)
+    {
+        this.target = target;
     }
 
     public string StateKey(State state)
@@ -256,7 +267,7 @@ public class Character : MonoBehaviour
     }
     private void Idle()
     {
-        if (Vector2.Distance(Position2D, target.Position2D) <= 2.0f)
+        if (target != null && Vector2.Distance(Position2D, target.Position2D) <= 2.0f)
         {
             delayTime = 0.0f;
             state = State.Tracking;
@@ -282,7 +293,7 @@ public class Character : MonoBehaviour
 
     private void Tracking()
     {
-        if (Vector2.Distance(Position2D, target.Position2D) > 2.0f)
+        if (target == null || Vector2.Distance(Position2D, target.Position2D) > 2.0f)
             state = State.Idle;
         else
         {
@@ -310,7 +321,7 @@ public class Character : MonoBehaviour
 
     private void Run()
     {
-        if (Vector2.Distance(Position2D, target.Position2D) <= 2.0f)
+        if (target != null && Vector2.Distance(Position2D, target.Position2D) <= 2.0f)
         {
             delayTime = 0.0f;
             state = State.Tracking;
@@ -320,6 +331,13 @@ public class Character : MonoBehaviour
             List<Node> finalNodeList = new List<Node>();
             AStarPathfinderManager.Instance.Pathfind(MapManager.Instance.MapName, Vector2IntPosition, destination, ref finalNodeList);
             
+            if(nextNode == null)
+            {
+                delayTime = 0.0f;
+                state = State.Tracking;
+                return;
+            }
+
             nextNode = finalNodeList.Count >= 2 ? finalNodeList[1] : finalNodeList[0];
 
             var nextPos = new Vector2((float)nextNode.x, (float)nextNode.y);
