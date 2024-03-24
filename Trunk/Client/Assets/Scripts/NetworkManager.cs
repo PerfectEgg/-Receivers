@@ -5,14 +5,21 @@ using DummyClient;
 using ServerCore;
 using System.Collections;
 using System.Collections.Generic;
+using static S_PlayerList;
 
 public class NetworkManager : MonoBehaviour
 {
     ServerSession _session = new ServerSession();
+    public static int _playerId;
 
     public void Send(ArraySegment<byte> sendBuff)
     {
         _session.Send(sendBuff);
+    }
+
+    public void SetPlayerId(int id)
+    {
+        _playerId = id;
     }
 
     void Start()
@@ -27,6 +34,7 @@ public class NetworkManager : MonoBehaviour
         Connector connector = new Connector();
 
         connector.Connect(endPoint, () => { return _session; }, 1);
+        SetPlayerId(1);
     }
 
     void Update()
