@@ -37,6 +37,9 @@ namespace Server
             //FlushRoom();
             JobTimer.Instance.Push(FlushRoom);
 
+            //AStarPathfinder
+            //ASatrPathfinder pathfinder = new ASatrPathfinder();
+
             while (true)
             {
                 JobTimer.Instance.Flush();

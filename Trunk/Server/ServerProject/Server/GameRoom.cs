@@ -1,4 +1,5 @@
-﻿using ServerCore;
+﻿using AStarPathfind;
+using ServerCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,10 @@ namespace Server
     {
         List<ClientSession> _session = new List<ClientSession>();
         JobQueue _jobQueue = new JobQueue();
-        List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>(); 
+        List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>();
+
+        private string mapName = "";
+        public string MapName => mapName;
 
         public void Push(Action job)
         {
@@ -52,11 +56,15 @@ namespace Server
             session.Send(players.Write());
 
             // 신입생이 입장한 사실을 모든 플레이어에게 전송
-            S_BroadcastEnterGame enter = new S_BroadcastEnterGame();
+            //S_BroadcastEnterGame enter = new S_BroadcastEnterGame();
+            //enter.playerId = session.SessionID;
+            //enter.posX = 0;
+            //enter.posY = 0;
+            //Broadcast(enter.Write());
+
+            S_EnterSuccess enter = new S_EnterSuccess();
             enter.playerId = session.SessionID;
-            enter.posX = 0;
-            enter.posY = 0;
-            Broadcast(enter.Write());
+            session.Send(enter.Write());
         }
 
         public void Leave(ClientSession session)
@@ -82,6 +90,16 @@ namespace Server
             move.posX = session.PosX;
             move.posY = session.PosY;
             Broadcast(move.Write());
+        }
+        public void SetMapName(ClientSession session, C_EnterMap packet)
+        {
+            this.mapName = ASatrPathfinder.Instance.GetNameToIndex(packet.mapIndex);
+
+            S_BroadcastEnterGame enter = new S_BroadcastEnterGame();
+            enter.playerId = session.SessionID;
+            enter.posX = 0;
+            enter.posY = 0;
+            Broadcast(enter.Write());
         }
     }
 }

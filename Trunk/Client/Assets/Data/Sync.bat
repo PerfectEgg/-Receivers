@@ -1,0 +1,1 @@
+xcopy %~dp0\MapData %~dp0..\..\..\..\Data\MapData /e /k /y

@@ -27,6 +27,8 @@ Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>> _makeFunc =
         _handler.Add((ushort)PacketID.S_PlayerList, PacketHandler.S_PlayerListHandler);
       _makeFunc.Add((ushort)PacketID.S_BroadcastMove, MakePacket<S_BroadcastMove>);
         _handler.Add((ushort)PacketID.S_BroadcastMove, PacketHandler.S_BroadcastMoveHandler);
+      _makeFunc.Add((ushort)PacketID.S_EnterSuccess, MakePacket<S_EnterSuccess>);
+        _handler.Add((ushort)PacketID.S_EnterSuccess, PacketHandler.S_EnterSuccess);
 
     }
 

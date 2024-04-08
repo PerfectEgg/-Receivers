@@ -1,27 +1,25 @@
-﻿using System;
+﻿using AStarPathfind;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Assets.Script.LazySingleton;
-using Assets.Script.Manager;
-using AStarPathfind;
+using System.Numerics;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
-
-namespace Assets.Script.AStartPathfinder
+namespace Server
 {
-    public class AStarPathfinderManager : LazySingleton<AStarPathfinderManager>
+    public class ASatrPathfinder
     {
-        Dictionary<string, AStarPathfinder> dicAStarts;
+        public static ASatrPathfinder Instance { get; } = new ASatrPathfinder();
 
-        private readonly string path;
-        public AStarPathfinderManager()
+        string path = "../../../../../../../Data/MapData";
+        Dictionary<string, AStarPathfinder> dicAStarts = new Dictionary<string, AStarPathfinder>();
+
+        public ASatrPathfinder()
         {
-            dicAStarts = new Dictionary<string, AStarPathfinder>();
-
-            var p = UnityEngine.Application.dataPath;
-            path = p + "/Data/MapData/";
-
             Load();
         }
 
@@ -29,7 +27,7 @@ namespace Assets.Script.AStartPathfinder
         {
             DirectoryInfo di = new DirectoryInfo(path);
 
-            foreach(var file in di.GetFiles())
+            foreach (var file in di.GetFiles())
             {
                 var fullName = file.Name;
 
@@ -53,23 +51,7 @@ namespace Assets.Script.AStartPathfinder
             } // end of foreach(var file in di.GetFiles())
         }
 
-        public bool GetMapMinMaxPos(string key, out int minX, out int minY, out int maxX, out int maxY)
-        {
-            minX = 0;
-            minY = 0;
-            maxX = 0;
-            maxY = 0;
 
-            if (!dicAStarts.TryGetValue(key, out var map))
-                return false;
-
-            minX = map.bottomLeft.x;
-            minY = map.bottomLeft.y;
-            maxX = map.topRight.x;
-            maxY = map.topRight.y;
-
-            return true;
-        }
 
         public bool Pathfind(string key, Vector2Int stratPos, Vector2Int endPos, ref List<Node> finalNodeList)
         {
@@ -99,9 +81,9 @@ namespace Assets.Script.AStartPathfinder
             return new Vector2(result.x, result.y);
         }
 
-        public int GetMapIndex()
+        public string GetNameToIndex(int index)
         {
-            return Array.IndexOf(dicAStarts.Keys.ToArray(), MapManager.Instance.MapName);
+            return dicAStarts.Keys.ElementAt(index);
         }
     }
 }

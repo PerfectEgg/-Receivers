@@ -4,20 +4,11 @@ using AStarPathfind;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Server.Packet;
 
 // 나중에 플레이어, 적 클래스 나누기.
 public class Character : MonoBehaviour
 {
-    public enum CharacterType : short
-    {
-        None = 0,
-        User = 1,
-        Monster = 2,
-        // 멀티 플레이어 캐릭터 추가
-        another_User = 3,
-        Max,
-    }
-
     public enum State : short
     {
         None = 0,

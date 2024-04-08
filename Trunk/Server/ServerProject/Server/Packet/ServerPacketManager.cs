@@ -23,6 +23,8 @@ Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>> _makeFunc =
         _handler.Add((ushort)PacketID.C_LeaveGame, PacketHandler.C_LeaveGameHandler);
       _makeFunc.Add((ushort)PacketID.C_Move, MakePacket<C_Move>);
         _handler.Add((ushort)PacketID.C_Move, PacketHandler.C_MoveHandler);
+      _makeFunc.Add((ushort)PacketID.C_EnterMap, MakePacket<C_EnterMap>);
+        _handler.Add((ushort)PacketID.C_EnterMap, PacketHandler.C_EnterMap);
 
     }
 

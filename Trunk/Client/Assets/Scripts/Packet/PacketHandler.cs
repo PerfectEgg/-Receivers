@@ -1,4 +1,7 @@
-﻿using DummyClient;
+﻿using Assets.Script.AStartPathfinder;
+using Assets.Script.Manager;
+using AStarPathfind;
+using DummyClient;
 using ServerCore;
 using System;
 using System.Collections.Generic;
@@ -40,4 +43,17 @@ internal class PacketHandler
 
         PlayerManager.Instance.Move(pkt);
     }
+
+    public static void S_EnterSuccess(PacketSession session, IPacket packet)
+    {
+        S_EnterSuccess pkt = packet as S_EnterSuccess;
+        ServerSession serverSession = session as ServerSession;
+
+        C_EnterMap sender = new C_EnterMap();
+        sender.playerId = pkt.playerId;
+        sender.mapIndex = AStarPathfinderManager.Instance.GetMapIndex();
+
+        serverSession.Send(sender.Write());
+    }
+
 }

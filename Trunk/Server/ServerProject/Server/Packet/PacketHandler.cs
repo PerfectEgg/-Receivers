@@ -32,4 +32,18 @@ internal class PacketHandler
         GameRoom room = clientSession.Room;
         room.Push(() => room.Move(clientSession, movePacket));
     }
+
+    public static void C_EnterMap(PacketSession session, IPacket packet)
+    {
+        C_EnterMap movePacket = packet as C_EnterMap;
+        ClientSession clientSession = session as ClientSession;
+
+        if (clientSession == null)
+            return;
+
+        //Console.WriteLine($"{movePacket.posX}, {movePacket.posY}, {movePacket.posZ}");
+
+        GameRoom room = clientSession.Room;
+        room.Push(() => room.SetMapName(clientSession, movePacket));
+    }
 }

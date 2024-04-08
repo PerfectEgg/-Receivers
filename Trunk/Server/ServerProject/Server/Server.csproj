@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ServerCore\ServerCore.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AStarPathfinder">
+      <HintPath>..\..\..\Tool\AStarPathfinder\AStarPathfinder\bin\Debug\net6.0\AStarPathfinder.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerCore">
+      <HintPath>..\ServerCore\bin\Debug\net6.0\ServerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
